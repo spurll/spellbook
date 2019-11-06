@@ -1,0 +1,42 @@
+---
+general:
+  - spell
+  - rite
+  - invocation
+  - thaumaturgy
+curses:
+  - curse
+  - bane
+  - blasphemy
+  - obscenity
+  - profanity
+  - fulmination
+  - malediction
+  - denunciation
+  - imprecation
+  - jinx
+  - devilry
+blessings:
+  - blessing
+  - spell
+  - dedication
+  - enchantment
+  - consecration
+  - sacrement
+  - enchantment
+  - charm
+blights:
+  - blight
+  - bane
+  - curse
+  - malediction
+  - jinx
+cures:
+  - cure
+  - charm
+  - remedy
+  - antidote
+  - corrective
+  - elixir
+  - poultice
+

@@ -1,0 +1,65 @@
+---
+genders:
+  male:
+    noun: man
+    pronouns:
+      - he
+      - him
+      - his
+  female:
+    noun: woman
+    pronouns:
+      - she
+      - her
+      - her
+  agender:
+    noun: figure
+    pronoun:
+      - they
+      - them
+      - their
+attributes:
+  - blond
+  - wild-haired
+  - pale
+  - dark
+  - grey
+  - stout
+  - bent
+  - slender
+  - solid
+  - waifish
+  - furtive
+  - determined
+  - ancient
+  - young
+dress:
+  - wrapped in a dark cloak
+  - clad in shining raiment
+  - with a wide-brimmed hat
+  - carrying a twisted staff
+  - wielding a sword
+  - holding a glowing wand
+  - with features hidden by shadow
+companions:
+  - familiar
+  - great shadow
+  - sinister presence
+  - monkey
+  - lemur
+  - bat
+  - cat
+  - wolf
+  - fox
+  - fowl
+  - rat
+  - squirrel
+  - toad
+limbs:
+  - foot
+  - hand
+  - leg
+  - arm
+  - tentacle
+  - pseudopodium
+  - proboscis
