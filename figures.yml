@@ -6,21 +6,25 @@ genders:
       - he
       - him
       - his
+    imperfect: was
   female:
     noun: woman
     pronouns:
       - she
       - her
       - her
+    imperfect: was
   agender:
     noun: figure
-    pronoun:
+    pronouns:
       - they
       - them
       - their
+    imperfect: were
 attributes:
   - blond
   - wild-haired
+  - bald
   - pale
   - dark
   - grey
@@ -35,26 +39,37 @@ attributes:
   - young
 dress:
   - wrapped in a dark cloak
-  - clad in shining raiment
+  - clad in brilliant raiment
+  - clad in dented armour
   - with a wide-brimmed hat
   - carrying a twisted staff
   - wielding a sword
   - holding a glowing wand
   - with features hidden by shadow
 companions:
-  - familiar
-  - great shadow
-  - sinister presence
-  - monkey
-  - lemur
-  - bat
-  - cat
-  - wolf
-  - fox
-  - fowl
-  - rat
-  - squirrel
-  - toad
+  types:
+    - familiar
+    - shadow
+    - presence
+    - form
+    - monkey
+    - lemur
+    - bat
+    - cat
+    - wolf
+    - fox
+    - fowl
+    - rat
+    - squirrel
+    - toad
+  attributes:
+    - cavorting
+    - sinister
+    - great
+    - intangible
+    - ghostly
+    - menacing
+    - shadowy
 limbs:
   - foot
   - hand

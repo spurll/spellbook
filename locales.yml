@@ -1,0 +1,33 @@
+---
+locales:
+  - cavern
+  - mansion
+  - wood
+  - basement
+  - warehouse
+  - forest
+  - cove
+  - clearing
+  - grotto
+  - gully
+  - tomb
+  - barrow
+  - ruin
+  - castle
+  - tower
+  - dungeon
+attributes:
+  - grim
+  - shadowed
+  - darkened
+  - forboding
+  - forbidding
+  - forgotten
+  - haunted
+  - ancient
+  - moonlit
+  - cursed
+  - blasphemous
+  - misty
+  - hidden
+
