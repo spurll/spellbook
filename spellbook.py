@@ -3,35 +3,77 @@
 # Written by Gem Newman. This work is licensed under a Creative Commons
 # Attribution-ShareAlike 4.0 International License.
 
+import path
 import argparse
 import yaml
+import re
 
 CONFIG = 'config.yaml'
-SPELLS = '.yaml'
+SPELLS = 'spells.yaml'
 FIGURES = 'figures.yaml'
 ACTIONS = 'actions.yaml'
 COMPONENTS = 'components.yaml'
 
 # No need to include "y" as it only rarely functions as an initial vowel
 VOWELS = 'AEIOUaeiou'
+TARGET = 50000
+
+basedir = path.abspath(path.dirname(__file__))
+
+# Load configuration and dictionaries
+config = load_yaml(path.join(basedir, CONFIG))
+people = load_yaml(path.join(basedir, PEOPLE))
+spells = load_yaml(path.join(basedir, SPELLS))
+actions = load_yaml(path.join(basedir, ACTIONS))
+components = load_yaml(path.join(basedir, COMPONENTS))
 
 
 
+# TODO: Add cautions
 
 
 
 
 def generate(outfile):
-    config = load_yaml(CONFIG)
-    people = load_yaml(PEOPLE)
-    spells = load_yaml(SPELLS)
-    actions = load_yaml(ACTIONS)
-    components = load_yaml(COMPONENTS)
+    prologue, epilogue = generate_frame_story()
+
+    pages = [generate_cover()]
+
+    while wordcount(prologue, epilogue, *pages) < TARGET:
+        pages.append(generate_page())
+
+    book = '\n\n'.join((prologue, epilogue, *pages))
+
+    print('Spellbook complete.')
+    print(f'Length: {pages.length} spells, {wordcount(book)} words\n')
+
+    print(f'Writing output to {outfile}...')
+
+    with open(outfile, 'w', encoding='utf8') as f:
+        f.write('\n\n'.join((prologue))
+
+    print('Done.')
 
 
 def load_yaml(file):
     with open(file, 'r', encoding='utf8') as f:
         return yaml.load(f, Loader=yaml.FullLoader)
+
+
+def generate_frame():
+    pass
+
+
+def generate_cover():
+    pass
+
+
+def generate_page():
+    pass
+
+
+def wordcount(*args):
+    return sum((len(re.findall(r'\b\w', str)) for str in args))
 
 
 def with_indefinite(noun):
