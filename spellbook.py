@@ -9,6 +9,10 @@ import re
 from os import path
 from random import choice
 
+from words import word, wordcount, indefinite, plural
+from maybe import flip
+
+
 CONFIG = 'config.yml'
 SPELLS = 'spells.yml'
 FIGURES = 'figures.yml'
@@ -40,6 +44,9 @@ components = load_yaml(path.join(basedir, COMPONENTS))
 
 # TODO: Add cautions
 
+# TODO: Occasionally add people's names to spells
+
+# TODO: Add a person's name to the book itself
 
 
 
@@ -85,10 +92,7 @@ def generate_frame():
         f'{locale}, '
     ))
 
-    companion = (
-        choice(figures['companions']['types'])
-        if choice((True, False)) else None
-    )
+    companion = choice(figures['companions']['types']) if flip() else None
 
     if companion:
         prologue += ' '.join((
@@ -104,7 +108,7 @@ def generate_frame():
         f'the object of {pronouns[2]} quest. '
     )
 
-    if choice((True, False)):
+    if flip():
         prologue += (
             f'The {figure} suddenly surged forward and grasped the tome '
             'eagerly. '
@@ -141,49 +145,6 @@ def generate_cover():
 
 def generate_page():
     pass
-
-
-def wordcount(*args):
-    """Double-counts hyphenated words, but oh well."""
-    return sum((len(re.findall(r'\b\w', str)) for str in args))
-
-
-def indefinite(noun):
-    """Returns the given noun prefaced with 'a' or 'an', as appropriate."""
-    return f'an {noun}' if noun[0] in VOWELS else f'a {noun}'
-
-
-def plural(noun):
-    """Returns the plural of a given noun (a hopeless task in English)."""
-    if noun == 'ox':
-        return f'{noun}en'
-
-    if noun.endswith('foot'):
-        return f'{noun[:-4]}feet'
-    if noun.endswith('child'):
-        return f'{noun}ren'
-    if noun.endswith('man'):
-        return f'{noun[:-3]}men'
-    if noun.endsiwth(('moose', 'caribou', 'sheep', 'fish')):
-        return noun
-
-    if noun.endswith('ium'):
-        return f'{noun[:-3]}ia'
-    if noun.endswith(('pus', 'pod')):
-        return f'{noun[:-3]}podes'
-    if noun.endswith('scis'):
-        return f'{noun[:-4]}scides'
-    if noun.endswith('us') and not noun.endswith('lotus'):
-        return f'{noun[:-2]}i'
-    if noun.endswith('i'):
-        return noun
-
-    if noun.endswith('y'):
-        return f'{noun[:-1]}ies'
-    if noun.endswith(('s', 'x', 'ch', 'sh')):
-        return f'{noun}es'
-
-    return f'{noun}s'
 
 
 def main():
