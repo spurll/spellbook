@@ -23,11 +23,13 @@ genders:
     imperfect: were
 attributes:
   - blond
+  - dark
+  - pale
+  - grey
+  - clever
+  - graceful
   - wild-haired
   - bald
-  - pale
-  - dark
-  - grey
   - stout
   - bent
   - slender
@@ -36,16 +38,22 @@ attributes:
   - furtive
   - determined
   - ancient
+  - wizened
+  - shadowy
+  - bent
   - young
 dress:
   - wrapped in a dark cloak
   - clad in brilliant raiment
   - clad in dented armour
+  - wearing a makeshift disguise
   - with a wide-brimmed hat
   - carrying a twisted staff
   - wielding a sword
   - holding a glowing wand
-  - with features hidden by shadow
+  - features hidden by shadow
+  - patchwork cape fluttering behind
+  - slung with packs and bags
 companions:
   types:
     - familiar

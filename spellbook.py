@@ -46,10 +46,7 @@ components = load_yaml(path.join(basedir, COMPONENTS))
 def generate(outfile):
     prologue, epilogue = generate_frame()
 
-
-
     print(prologue)
-    print('')
     print(epilogue)
     return;
 
@@ -73,24 +70,34 @@ def generate(outfile):
 
 
 def generate_frame():
-    person = choice(list(figures['genders'].values()))
-    pronouns = person['pronouns']
+    gender = choice(list(figures['genders'].values()))
+    figure = gender['noun']
+    pronouns = gender['pronouns']
     attribute = choice(figures['attributes'])
+    locale = choice(locales['locales'])
 
-    description = f'{indefinite(attribute)} {person["noun"]}'
+    # Prologue
+    prologue = ' '.join((
+        indefinite(attribute).capitalize(),
+        figure,
+        'stole into',
+        indefinite(choice(locales['attributes'])),
+        f'{locale}, '
+    ))
 
-    locale = f'{choice(locales["attributes"])} {(choice(locales["locales"]))}'
+    companion = (
+        choice(figures['companions']['types'])
+        if choice((True, False)) else None
+    )
 
-    prologue = f'{description.capitalize()} stole into {indefinite(locale)}, '
-
-    if choice((True, False)):
-        prologue += f'{choice(figures["dress"])}. '
-    else:
-        companion = ' '.join((
-            choice(figures['companions']['attributes']),
-            choice(figures['companions']['types'])
+    if companion:
+        prologue += ' '.join((
+            'accompanied by',
+            indefinite(choice(figures['companions']['attributes'])),
+            f'{companion}. '
         ))
-        prologue += f'accompanied by {indefinite(companion)}. '
+    else:
+        prologue += f'{choice(figures["dress"])}. '
 
     prologue += (
         f'{pronouns[0].capitalize()} stopped as {pronouns[2]} eyes lit upon '
@@ -99,13 +106,12 @@ def generate_frame():
 
     if choice((True, False)):
         prologue += (
-            f'The {person["noun"]} suddenly surged forward and grasped the '
-            'tome eagerly. '
+            f'The {figure} suddenly surged forward and grasped the tome '
+            'eagerly. '
         )
     else:
         prologue += (
-            f'The {person["noun"]} began to move again, approaching the '
-            'tome warily. '
+            f'The {figure} began to move again, approaching the tome warily. '
         )
 
     prologue += (
@@ -113,7 +119,18 @@ def generate_frame():
         'opened its cover and began to read.'
     )
 
-    epilogue = ''
+    # Epilogue
+    epilogue = ' '.join((
+        f'The {attribute} {figure} closed the book.',
+        f'Rising to {pronouns[2]} feet,',
+        f'{pronouns[0]} beckoned to {pronouns[2]} {companion} and set out'
+        if companion else f'{pronouns[0]} left the {locale}',
+        f'in search of components.'
+    ))
+
+    # Add horizontal rules to separate frame story from the spellbook itself
+    prologue = f'{prologue}\n\n---'
+    epilogue = f'\n\n---\n\n{epilogue}'
 
     return prologue, epilogue
 
