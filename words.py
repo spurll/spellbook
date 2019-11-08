@@ -12,6 +12,11 @@ TERMINAL_COMBINATIONS = ['nt', 'pt', 'll', 'ss', 'ck', 'sk']
 INITIAL = CONSONANTS + COMBINATIONS + INITIAL_COMBINATIONS
 TERMINAL = CONSONANTS + COMBINATIONS + TERMINAL_COMBINATIONS
 
+LOWER_TITLE = [
+    'a', 'an', 'the', 'and', 'as', 'at', 'atop', 'but', 'by', 'from', 'in',
+    'of', 'off', 'on', 'onto', 'out', 'over', 'per', 'to', 'up', 'via', 'with'
+]
+
 
 def word(syllables=None):
     syllables = syllables or randint(1, 3)
@@ -37,7 +42,19 @@ def syllable(first=True, last=True):
 
 
 def name():
-    return word().capitalize() + (f' {word().capitalize()}' if flip() else '')
+    first = word().capitalize()
+
+    if flip():
+        return first
+
+    return f'{first} {"of " if maybe(0.25) else ""}{word().capitalize()}'
+
+
+def titlecase(str):
+    return ' '.join(
+        w.capitalize() if i == 0 or w not in LOWER_TITLE else w
+        for i, w in enumerate(str.split())
+    )
 
 
 def wordcount(*args):

@@ -9,7 +9,7 @@ import re
 from os import path
 from random import choice
 
-from words import name, wordcount, indefinite, plural
+from words import name, titlecase, wordcount, indefinite, plural
 from maybe import flip, choice_without
 
 
@@ -81,32 +81,32 @@ def generate(outfile):
 
 
 def generate_title(author):
-    book = choice(books['books']).capitalize()
+    book = choice(books['books'])
 
     if flip():
-        book = f"{choice(books['attributes']).capitalize()} {book}"
+        book = f"{choice(books['attributes'])} {book}"
 
     subjects = [s for c in spells['spells'].values() for s in c]
-    subject = choice(subjects).capitalize()
+    subject = choice(subjects)
 
     if flip():
         subject = ' and '.join((
             plural(subject),
-            choice_without(subjects, subject.lower()).capitalize()
+            choice_without(subjects, subject.lower())
         ))
 
     subject = plural(subject)
 
     if flip():
-        subject = f"{choice(spells['attributes']).capitalize()} {subject}"
+        subject = f"{choice(spells['attributes'])} {subject}"
 
     if flip():
-        return f"{author}'s {book} {subject}"
+        return titlecase(f"{author}'s {book} {subject}")
 
     if flip():
-        return f"{book} {name()}'s {subject}"
+        return titlecase(f"{book} {name()}'s {subject}")
 
-    return f'{book} {subject}'
+    return titlecase(f'{book} {subject}')
 
 
 def generate_frame():
