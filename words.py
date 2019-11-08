@@ -36,6 +36,10 @@ def syllable(first=True, last=True):
     return initial + vowel + extension + terminal
 
 
+def name():
+    return word().capitalize() + (f' {word().capitalize()}' if flip() else '')
+
+
 def wordcount(*args):
     """Double-counts hyphenated words, but oh well."""
     return sum((len(re.findall(r'\b\w', str)) for str in args))
@@ -57,7 +61,7 @@ def plural(noun):
         return f'{noun}ren'
     if noun.endswith('man'):
         return f'{noun[:-3]}men'
-    if noun.endsiwth(('moose', 'caribou', 'sheep', 'fish')):
+    if noun.endswith(('moose', 'caribou', 'sheep', 'fish')):
         return noun
 
     if noun.endswith('ium'):

@@ -9,11 +9,12 @@ import re
 from os import path
 from random import choice
 
-from words import word, wordcount, indefinite, plural
-from maybe import flip
+from words import name, wordcount, indefinite, plural
+from maybe import flip, choice_without
 
 
 CONFIG = 'config.yml'
+BOOKS = 'books.yml'
 SPELLS = 'spells.yml'
 FIGURES = 'figures.yml'
 LOCALES = 'locales.yml'
@@ -34,9 +35,10 @@ def load_yaml(file):
 
 # Load configuration and dictionaries
 config = load_yaml(path.join(basedir, CONFIG))
+books = load_yaml(path.join(basedir, BOOKS))
+spells = load_yaml(path.join(basedir, SPELLS))
 figures = load_yaml(path.join(basedir, FIGURES))
 locales = load_yaml(path.join(basedir, LOCALES))
-spells = load_yaml(path.join(basedir, SPELLS))
 actions = load_yaml(path.join(basedir, ACTIONS))
 components = load_yaml(path.join(basedir, COMPONENTS))
 
@@ -46,24 +48,26 @@ components = load_yaml(path.join(basedir, COMPONENTS))
 
 # TODO: Occasionally add people's names to spells
 
-# TODO: Add a person's name to the book itself
+# TODO: Add title of the book, titles between sections, page numbers
+
 
 
 
 def generate(outfile):
+    author = name()
+    title = generate_title(author)
     prologue, epilogue = generate_frame()
+    pages = [generate_cover(title, author)]
 
     print(prologue)
+    print(pages)
     print(epilogue)
     return;
-
-    pages = [generate_cover()]
 
     while wordcount(prologue, epilogue, *pages) < TARGET:
         pages.append(generate_page())
 
-    # TODO: Add title of the book, titles between sections, page numbers
-    book = '\n\n'.join((prologue, epilogue, *pages))
+    book = f'# {title}\n\n' + '\n\n---\n\n'.join((prologue, *pages, epilogue))
 
     print('Spellbook complete.')
     print(f'Length: {pages.length} spells, {wordcount(book)} words\n')
@@ -74,6 +78,35 @@ def generate(outfile):
         f.write('\n\n'.join((prologue)))
 
     print('Done.')
+
+
+def generate_title(author):
+    book = choice(books['books']).capitalize()
+
+    if flip():
+        book = f"{choice(books['attributes']).capitalize()} {book}"
+
+    subjects = [s for c in spells['spells'].values() for s in c]
+    subject = choice(subjects).capitalize()
+
+    if flip():
+        subject = ' and '.join((
+            plural(subject),
+            choice_without(subjects, subject.lower()).capitalize()
+        ))
+
+    subject = plural(subject)
+
+    if flip():
+        subject = f"{choice(spells['attributes']).capitalize()} {subject}"
+
+    if flip():
+        return f"{author}'s {book} {subject}"
+
+    if flip():
+        return f"{book} {name()}'s {subject}"
+
+    return f'{book} {subject}'
 
 
 def generate_frame():
@@ -132,15 +165,14 @@ def generate_frame():
         f'in search of components.'
     ))
 
-    # Add horizontal rules to separate frame story from the spellbook itself
-    prologue = f'{prologue}\n\n---'
-    epilogue = f'\n\n---\n\n{epilogue}'
-
     return prologue, epilogue
 
 
-def generate_cover():
-    pass
+def generate_cover(title, author):
+    return f'## {title}\n\n### by {author}'
+
+# WITH ILLUSTRATIONS BY XXX
+
 
 
 def generate_page():

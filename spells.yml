@@ -1,42 +1,69 @@
 ---
-general:
-  - spell
-  - rite
-  - invocation
-  - thaumaturgy
-curses:
-  - curse
-  - bane
-  - blasphemy
-  - obscenity
-  - profanity
-  - fulmination
-  - malediction
-  - denunciation
-  - imprecation
-  - jinx
-  - devilry
-blessings:
-  - blessing
-  - spell
-  - dedication
-  - enchantment
-  - consecration
-  - sacrement
-  - enchantment
-  - charm
-blights:
-  - blight
-  - bane
-  - curse
-  - malediction
-  - jinx
-cures:
-  - cure
-  - charm
-  - remedy
-  - antidote
-  - corrective
-  - elixir
-  - poultice
+spells:
+  general:
+    - spell
+    - rite
+    - invocation
+    - thaumaturgy
+  curses:
+    - curse
+    - bane
+    - blasphemy
+    - obscenity
+    - profanity
+    - fulmination
+    - malediction
+    - denunciation
+    - imprecation
+    - jinx
+    - devilry
+  blessings:
+    - blessing
+    - spell
+    - dedication
+    - enchantment
+    - consecration
+    - sacrement
+    - enchantment
+    - charm
+  blights:
+    - blight
+    - bane
+    - curse
+    - malediction
+    - jinx
+  cures:
+    - cure
+    - charm
+    - remedy
+    - antidote
+    - corrective
+    - elixir
+    - poultice
+attributes:
+  - marvelous
+  - devilish
+  - astonishing
+  - surprising
+  - major
+  - minor
+  - complex
+  - useful
+  - quotidian
+  - inspired
+  - perplexing
+  - blasphemous
+  - cursed
+  - perspicacious
+  - parsimonious
+  - simple
+  - fulminating
+  - baroque
+  - grand
+  - clever
+  - indispensible
+  - foolish
+  - favoured
+  - sanctioned
+  - forbidden
 
