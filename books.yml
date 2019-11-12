@@ -7,20 +7,19 @@ books:
   - manual of
   - glossary of
   - index of
-  - encyclopaedia of
+  - encyclopædia of
   - study of
   - record of
   - chronicle of
-  - reference of
   - omnibus of
-  - compendium
+  - compendium of
   - pamphlet on
   - treatise on
   - dissertation on
   - primer on
   - writings on
+  - experimenations on
   - research into
-  - experimenations into
 attributes:
   - dusty
   - ancient
@@ -35,4 +34,34 @@ attributes:
   - helpful
   - terrible
   - lesser
-
+  - academic
+  - scholarly
+  - pedagocial
+  - serendipitous
+  - applicable
+  - valuable
+  - goodly
+  - accessible
+  - grubby
+  - unclean
+  - blasphemous
+  - sanctified
+  - forbidden
+  - comprehensive
+editions:
+  - first
+  - second
+  - third
+  - fourth
+  - fifth
+  - sixth
+  - seventh
+  - revised
+  - expanded
+roles:
+  - edited
+  - transcribed
+  - translated
+  - illuminations
+  - interior illustrations
+  - lithographs

@@ -5,7 +5,7 @@ spells:
     - rite
     - invocation
     - thaumaturgy
-  curses:
+  curse:
     - curse
     - bane
     - blasphemy
@@ -17,22 +17,21 @@ spells:
     - imprecation
     - jinx
     - devilry
-  blessings:
+  blessing:
     - blessing
-    - spell
     - dedication
     - enchantment
     - consecration
-    - sacrement
+    - sacrament
     - enchantment
     - charm
-  blights:
+  blight:
     - blight
     - bane
     - curse
     - malediction
     - jinx
-  cures:
+  cure:
     - cure
     - charm
     - remedy
@@ -40,6 +39,15 @@ spells:
     - corrective
     - elixir
     - poultice
+maladies:
+  - riotous
+  - fulminating
+  - bilious
+  - malingering
+  - malignant
+  - wart of the
+  - lazy
+  - putrid
 attributes:
   - marvelous
   - devilish
@@ -65,6 +73,23 @@ attributes:
   - foolish
   - favoured
   - sanctioned
+  - sanctified
   - forbidden
   - praiseworthy
+  - suppressed
+  - convenient
+  - crucial
+  - essential
+  - suitible
+  - practical
+  - efficacious
+  - unclean
+  - granular
+  - contrived
+  - feckless
+  - desultory
+  - senseless
+  - vacuous
+  - irregular
+  - fustian
 

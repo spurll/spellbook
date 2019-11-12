@@ -1,3 +1,4 @@
+import re
 from random import choice, randint
 from maybe import flip, maybe, choice_without
 
@@ -13,8 +14,9 @@ INITIAL = CONSONANTS + COMBINATIONS + INITIAL_COMBINATIONS
 TERMINAL = CONSONANTS + COMBINATIONS + TERMINAL_COMBINATIONS
 
 LOWER_TITLE = [
-    'a', 'an', 'the', 'and', 'as', 'at', 'atop', 'but', 'by', 'from', 'in',
-    'of', 'off', 'on', 'onto', 'out', 'over', 'per', 'to', 'up', 'via', 'with'
+    'a', 'an', 'the', 'and', 'as', 'at', 'atop', 'but', 'by', 'for', 'from',
+    'in', 'into', 'of', 'off', 'on', 'onto', 'out', 'over', 'per', 'to', 'up',
+    'via', 'with'
 ]
 
 
@@ -27,10 +29,13 @@ def word(syllables=None):
 
 def syllable(first=True, last=True):
     """
-    Begin with a consonant (or consonant combination), add vowel, optionally
-    add another vowel, and optionally end with a consonant.
+    Usually start with a consonant (or consonant combination), add vowel,
+    optionally add another vowel, and optionally end with a consonant.
     """
-    initial = choice(INITIAL if first else INITIAL + TERMINAL)
+    initial = (
+        choice(INITIAL if first else INITIAL + TERMINAL)
+        if maybe(0.75) else ''
+    )
     vowel = choice(VOWELS)
     extension = (
         choice_without(VOWELS, vowel if vowel not in 'eo' else None)

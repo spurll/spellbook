@@ -10,7 +10,7 @@ from os import path
 from random import choice
 
 from words import name, titlecase, wordcount, indefinite, plural
-from maybe import flip, choice_without
+from maybe import flip, maybe, choice_without
 
 
 CONFIG = 'config.yml'
@@ -21,9 +21,8 @@ LOCALES = 'locales.yml'
 ACTIONS = 'actions.yml'
 COMPONENTS = 'components.yml'
 
-# No need to include "y" as it only rarely functions as an initial vowel
-VOWELS = 'AEIOUaeiou'
-TARGET = 50000
+#TARGET = 50000
+TARGET = 500
 
 basedir = path.abspath(path.dirname(__file__))
 
@@ -41,41 +40,40 @@ figures = load_yaml(path.join(basedir, FIGURES))
 locales = load_yaml(path.join(basedir, LOCALES))
 actions = load_yaml(path.join(basedir, ACTIONS))
 components = load_yaml(path.join(basedir, COMPONENTS))
-
+parts = [
+    p for t in components['ingredients']['animal']['parts'].values() for p in t
+]
 
 
 # TODO: Add cautions
 
-# TODO: Occasionally add people's names to spells
+# TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
 
-# TODO: Add title of the book, titles between sections, page numbers
 
 
 
 
 def generate(outfile):
-    author = name()
+    authors = [name() for _ in range(8)]
+    author = authors[0]
     title = generate_title(author)
     prologue, epilogue = generate_frame()
-    pages = [generate_cover(title, author)]
-
-    print(prologue)
-    print(pages)
-    print(epilogue)
-    return;
+    pages = [generate_cover(title, authors)]
 
     while wordcount(prologue, epilogue, *pages) < TARGET:
-        pages.append(generate_page())
+        pages.append(generate_page(authors))
 
     book = f'# {title}\n\n' + '\n\n---\n\n'.join((prologue, *pages, epilogue))
 
-    print('Spellbook complete.')
-    print(f'Length: {pages.length} spells, {wordcount(book)} words\n')
+    print('Spellbook complete.\n')
+    print(f'Title: {title}')
+    print(f'Author: {author}')
+    print(f'Length: {len(pages)} spells, {wordcount(book)} words\n')
 
     print(f'Writing output to {outfile}...')
 
     with open(outfile, 'w', encoding='utf8') as f:
-        f.write('\n\n'.join((prologue)))
+        f.write(book)
 
     print('Done.')
 
@@ -168,15 +166,58 @@ def generate_frame():
     return prologue, epilogue
 
 
-def generate_cover(title, author):
-    return f'## {title}\n\n### by {author}'
+def generate_cover(title, authors):
+    cover = f'## {title}\n\n### {authors[0]}'
 
-# WITH ILLUSTRATIONS BY XXX
+    if maybe(0.2):
+        cover += f'\n\n{choice(books["editions"]).capitalize()} Edition'
+
+    for role in books['roles']:
+        if maybe(0.2):
+            cover += f'\n\n{role.capitalize()} by {name()}'
+
+    authors = ', '.join(authors[1:-2]) + f', and {authors[-1]}'
+    cover += f'\n\nWith thanks to {authors} for their contributions.'
+
+    return cover
 
 
+def generate_page(authors):
+    # Generate spell title
+    type = choice(list(spells['spells'].keys()))
+    title = choice(spells['spells'][type])
 
-def generate_page():
-    pass
+    if flip():
+        title = f'{choice(spells["attributes"])} {title}'
+
+
+    # TODO: Currently General stuff doesn't get anything but maybe a name and
+    # maybe an attribute. It needs at least one of those things, or something!
+
+    if not (type == 'general' or type == 'cure'):
+        title += ' of '
+    elif type == 'cure':
+        title += ' for '
+
+    if type == 'blight' or type == 'cure':
+        title += f'{choice(spells["maladies"])} {choice(parts)}'
+    elif type == 'blessing' or type == 'curse':
+        title += choice(components['ingredients']['general']['intangible'])
+
+    if maybe(0.25):
+        title = f"{choice(authors)}'s {title}"
+
+    title = titlecase(title)
+
+    spell = f'## {title}\n\n'
+
+    # Generate list of ingredients
+    # TODO
+
+    # Generate directions
+    # TODO
+
+    return spell
 
 
 def main():

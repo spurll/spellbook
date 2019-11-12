@@ -169,6 +169,8 @@ ingredients:
         - gonad
         - egg
         - heart
+        - gizzard
+        - cockles
         - cranium
         - mandible
         - patella
@@ -323,6 +325,7 @@ ingredients:
       - spider
       - locust
       - harvestman
+      - cockle
       - frost
       - rot
       - mildew
