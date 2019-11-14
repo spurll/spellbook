@@ -42,7 +42,9 @@ actions = load_yaml(path.join(basedir, ACTIONS))
 components = load_yaml(path.join(basedir, COMPONENTS))
 
 parts = [
-    p for t in components['ingredients']['animal']['parts'].values() for p in t
+    p
+    for t in ('solid', 'liquid')
+    for p in components['ingredients']['animal']['parts'][t]
 ]
 
 summons = (
@@ -202,7 +204,7 @@ def generate_page(authors):
         title += choice(spells['subjects'])
 
     if maybe(0.2):
-        title = f"{choice(authors)}'s {title}"
+        title = f"{choice(authors).split()[0]}'s {title}"
 
     title = titlecase(title)
 

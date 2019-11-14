@@ -7,7 +7,7 @@ CONSONANTS = list('bcdfghjklmnprstvwy')
 VOWELS = list('aeiou')
 
 COMBINATIONS = ['sh', 'ch', 'th', 'gh', 'st']
-INITIAL_COMBINATIONS = ['br', 'dr', 'pr', 'tr', 'bl', 'pl', 'tl']
+INITIAL_COMBINATIONS = ['br', 'dr', 'pr', 'tr', 'bl', 'pl']
 TERMINAL_COMBINATIONS = ['nt', 'pt', 'll', 'ss', 'ck', 'sk']
 
 INITIAL = CONSONANTS + COMBINATIONS + INITIAL_COMBINATIONS
@@ -34,14 +34,14 @@ def syllable(first=True, last=True):
     """
     initial = (
         choice(INITIAL if first else INITIAL + TERMINAL)
-        if maybe(0.75) else ''
+        if not first or maybe(0.75) else ''
     )
     vowel = choice(VOWELS)
     extension = (
         choice_without(VOWELS, vowel if vowel not in 'eo' else None)
         if maybe(0.25) else ''
     )
-    terminal = choice(TERMINAL) if last and flip() else ''
+    terminal = choice(TERMINAL) if last and maybe(0.75) else ''
 
     return initial + vowel + extension + terminal
 
