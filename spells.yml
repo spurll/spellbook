@@ -29,6 +29,7 @@ spells:
     - blight
     - bane
     - curse
+    - plague
     - malediction
     - jinx
   cure:
@@ -39,15 +40,98 @@ spells:
     - corrective
     - elixir
     - poultice
+  summoning:
+    - summoning
+    - conjuring
+    - congregation
+    - convocation
+    - beckoning
+    - lure
+    - invitation
+    - song
+    - gathering
+    - assembly
 maladies:
   - riotous
   - fulminating
   - bilious
   - malingering
   - malignant
-  - wart of the
+  - unfortunate
   - lazy
   - putrid
+  - cancerous
+  - sickly
+  - ailing
+  - delicate
+  - pallid
+  - peaky
+  - sickly
+  - porous
+  - diseased
+  - afflicted
+  - infirm
+  - bruised
+  - debilitated
+  - infected
+  - tottering
+  - disordered
+  - rash of the
+  - infestation of the
+  - disorder of the
+  - illness of the
+  - infection of the
+  - infirmity of the
+  - affliction of the
+  - disease of the
+  - wart of the
+subjects:
+  - love
+  - scorn
+  - esteem
+  - invisibility
+  - strength
+  - dexterity
+  - intelligence
+  - wisdom
+  - wit
+  - charisma
+  - charm
+  - memory
+  - mind
+  - forgetfulness
+  - joy
+  - sorrow
+  - virtue
+  - shadow
+  - darkness
+  - corruption
+  - sanctity
+  - sunlight
+  - starlight
+  - moongleam
+  - mist
+  - haze
+  - secret
+  - idealism
+  - pragmatism
+  - science
+  - superstition
+  - suspicion
+  - terror
+  - screaming
+  - gnashing
+  - hope
+  - despair
+  - fear
+  - luck
+  - delight
+  - life
+  - death
+  - trouble
+  - laughter
+  - wishes
+  - whispers
 attributes:
   - marvelous
   - devilish

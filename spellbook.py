@@ -40,21 +40,20 @@ figures = load_yaml(path.join(basedir, FIGURES))
 locales = load_yaml(path.join(basedir, LOCALES))
 actions = load_yaml(path.join(basedir, ACTIONS))
 components = load_yaml(path.join(basedir, COMPONENTS))
+
 parts = [
     p for t in components['ingredients']['animal']['parts'].values() for p in t
 ]
 
-
-# TODO: Add cautions
-
-# TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
-
-
-
+summons = (
+    [a for a in components['ingredients']['animal']['types']] +
+    [p for p in components['ingredients']['plant']['types']] +
+    [i for i in components['ingredients']['general']['discrete']]
+)
 
 
 def generate(outfile):
-    authors = [name() for _ in range(8)]
+    authors = [name() for _ in range(7)]
     author = authors[0]
     title = generate_title(author)
     prologue, epilogue = generate_frame()
@@ -190,21 +189,19 @@ def generate_page(authors):
     if flip():
         title = f'{choice(spells["attributes"])} {title}'
 
-
-    # TODO: Currently General stuff doesn't get anything but maybe a name and
-    # maybe an attribute. It needs at least one of those things, or something!
-
-    if not (type == 'general' or type == 'cure'):
-        title += ' of '
-    elif type == 'cure':
+    if type == 'cure':
         title += ' for '
+    else:
+        title += ' of '
 
-    if type == 'blight' or type == 'cure':
+    if type == 'summoning':
+        title += plural(choice(summons))
+    elif type == 'blight' or type == 'cure':
         title += f'{choice(spells["maladies"])} {choice(parts)}'
-    elif type == 'blessing' or type == 'curse':
-        title += choice(components['ingredients']['general']['intangible'])
+    else:
+        title += choice(spells['subjects'])
 
-    if maybe(0.25):
+    if maybe(0.2):
         title = f"{choice(authors)}'s {title}"
 
     title = titlecase(title)
@@ -215,7 +212,9 @@ def generate_page(authors):
     # TODO
 
     # Generate directions
-    # TODO
+    # TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
+
+    # TODO: Add cautions
 
     return spell
 

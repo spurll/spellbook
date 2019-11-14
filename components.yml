@@ -208,6 +208,9 @@ ingredients:
         - milk
         - tear
       intangible:
+        - sorrow
+        - joy
+        - love
         - shadow
         - scent
         - essence
@@ -316,16 +319,34 @@ ingredients:
         - touch
         - memory
   general:
-    solid:
+    discrete:
+      - toadstool
       - chanterelle
       - shiitake
       - pleurotus
       - enoki
       - yellowjacket
-      - spider
       - locust
       - harvestman
+      - flea
+      - butterfly
+      - moth
+      - centipede
+      - millipede
+      - mantis
+      - termite
+      - dragonfly
+      - ant
+      - mealworm
+      - scorpion
+      - mite
+      - spider
+      - solifuge
+      - worm
+      - mollusk
+      - snail
       - cockle
+    solid:
       - frost
       - rot
       - mildew
@@ -379,6 +400,9 @@ ingredients:
       - flux
       - caloric
     intangible:
+      - sorrow
+      - joy
+      - love
       - shadow
       - darkness
       - corruption
