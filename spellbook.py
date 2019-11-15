@@ -212,24 +212,62 @@ def generate_page(authors):
     directions = ''
 
     for _ in range(randint(3, 10)):
-        item = 
+        # This is horrifyingly inefficient
+        item = choice(list(components['ingredients'].items()))
+        item[1]['name'] = item[0]
+        item = item[1]
 
-        prep = (
-            choice(components['preparations'][type])
-            if type in ('solid', 'liquid') else ''
+        items.append(item)
+
+        part = (
+            choice(list(components['parts'][item['type']].items()))
+            if item['parts'] else None
         )
 
-        count, plural = (
-            choice(zip(counts, plurals))
-            if type != 'intangible' else (None, False)
-        )
+        # Item types: animal, plant, fungus, solid, liquid, intangible
+        # Part types: solid, liquid, intangible
+        type = part[1] if part else item['type']
 
-        items.append()
+        attributes = components['attributes']['general']
 
-        # TODO: Include occasional attributes
-        # TODO: If discrete, pluralize component if necessary
-        # TODO: If not discrete, pluralize the measurement if necessary
-        # TODO: If an animal with no parts, add live or dead
+        if type != 'intangible':
+            count, pluralize = choice(list(zip(counts, plurals)))
+        else:
+            count, pluralize = None, False
+
+        if type in ('solid', 'liquid'):
+            attributes += components['attributes'][type]
+            attribute = choice(attributes) if maybe(0.25) else None
+            measure = choice(components['measures'][type])
+
+            current = f'{part[0]} of {item["name"]}' if part else item['name']
+
+            current = ' '.join((
+                str(count),
+                plural(measure) if pluralize else measure,
+                f'{attribute} {current}' if attribute else current,
+            ))
+
+            if maybe(0.2):
+                current += f', {choice(components["preparations"][type])}'
+
+        else:
+            current = f'{part[0]} of {item["name"]}' if part else item['name']
+
+            if pluralize:
+                current = plural(current)
+
+            if maybe(0.25):
+                current = f'{choice(attributes)} {current}'
+
+            if count:
+                current = f'{count} {current}'
+
+        ingredients += f'* {current}\n'
+
+    # TODO: If an animal with no parts, add live or dead
+
+    # TODO: For some reason, solid attributes are showing up where they shouldn't
 
     # If contains liquid, "pour in... stirring constantly/occasionally"
 
