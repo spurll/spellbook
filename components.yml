@@ -73,356 +73,808 @@ measures:
     - drop
     - kask
     - tumbler
-ingredients:
+parts:
   animal:
-    types:
-      - man
-      - leprechaun
-      - hyrax
-      - chimera
-      - huldra
-      - gryphon
-      - yeti
-      - unicorn
-      - wyvern
-      - ghoul
-      - leviathan
-      - basilisk
-      - selkie
-      - kelpie
-      - redcap
-      - gnome
-      - demon
-      - troll
-      - wyrm
-      - bat
-      - newt
-      - rat
-      - parrot
-      - owl
-      - swallow
-      - heron
-      - albatross
-      - pidgeon
-      - mosasaur
-      - gharial
-      - crocodile
-      - caiman
-      - alligator
-      - bear
-      - monkey
-      - lemur
-      - fowl
-      - fox
-      - chameleon
-      - lungfish
-      - tarsir
-      - okapi
-      - lynx
-      - caribou
-      - rhinoceros
-      - shrew
-      - tanuki
-      - eel
-      - shad
-      - loach
-      - carp
-      - shark
-      - rhipidistian
-      - toad
-      - salamander
-      - dog
-      - ocelot
-      - marsupial
-      - squirrel
-      - baboon
-      - monotreme
-      - otter
-      - gibbon
-      - mouse
-      - rat
-      - sloth
-      - hedgehog
-      - ungulate
-      - anteater
-      - possum
-      - echidna
-      - pangolin
-      - serpent
-      - wombat
-      - elephant
-      - bovine
-      - peccary
-    parts:
-      solid:
-        - spleen
-        - eye
-        - hair
-        - ear
-        - nose
-        - brain
-        - thyroid
-        - tongue
-        - liver
-        - viscera
-        - gallbladder
-        - gonad
-        - egg
-        - heart
-        - gizzard
-        - cockles
-        - cranium
-        - mandible
-        - patella
-        - spine
-        - tusk
-        - tooth
-        - scapula
-        - sternum
-        - rib
-        - pelvis
-        - tibia
-        - fibula
-        - humerus
-        - radius
-        - ulna
-        - tarsal
-        - carpal
-        - phalanx
-        - heel
-        - talon
-        - horn
-        - scale
-        - tail
-      liquid:
-        - blood
-        - phlegm
-        - bile
-        - choler
-        - serum
-        - sebum
-        - cerumen
-        - lymph
-        - humour
-        - saliva
-        - milk
-        - tear
-      intangible:
-        - sorrow
-        - joy
-        - love
-        - shadow
-        - scent
-        - essence
-        - breath
-        - touch
-        - memory
-        - spirit
-        - conscience
-        - consciousness
-        - mind
-        - virtue
-        - greed
-        - laughter
-        - scream
-        - grin
-        - wink
-        - esteem
-        - whisper
-        - terror
-        - suspicion
-        - scorn
-        - spark
-        - wish
-        - hope
-        - despair
+    spleen: solid
+    eye: solid
+    hair: solid
+    ear: solid
+    nose: solid
+    brain: solid
+    thyroid: solid
+    tongue: solid
+    liver: solid
+    viscera: solid
+    gallbladder: solid
+    gonad: solid
+    egg: solid
+    heart: solid
+    gizzard: solid
+    cockles: solid
+    cranium: solid
+    mandible: solid
+    patella: solid
+    spine: solid
+    tusk: solid
+    tooth: solid
+    scapula: solid
+    sternum: solid
+    rib: solid
+    pelvis: solid
+    tibia: solid
+    fibula: solid
+    humerus: solid
+    radius: solid
+    ulna: solid
+    tarsal: solid
+    carpal: solid
+    phalanx: solid
+    heel: solid
+    talon: solid
+    horn: solid
+    scale: solid
+    tail: solid
+    blood: liquid
+    phlegm: liquid
+    bile: liquid
+    choler: liquid
+    serum: liquid
+    sebum: liquid
+    cerumen: liquid
+    lymph: liquid
+    humour: liquid
+    saliva: liquid
+    milk: liquid
+    tear: liquid
+    sorrow: intangible
+    joy: intangible
+    love: intangible
+    shadow: intangible
+    scent: intangible
+    essence: intangible
+    breath: intangible
+    touch: intangible
+    memory: intangible
+    spirit: intangible
+    conscience: intangible
+    consciousness: intangible
+    mind: intangible
+    virtue: intangible
+    greed: intangible
+    laughter: intangible
+    scream: intangible
+    grin: intangible
+    wink: intangible
+    esteem: intangible
+    whisper: intangible
+    terror: intangible
+    suspicion: intangible
+    scorn: intangible
+    spark: intangible
+    wish: intangible
+    hope: intangible
+    despair: intangible
   plant:
-    types:
-      - triffid
-      - hungry grass
-      - vegetable lamb
-      - mandrake
-      - Green Man
-      - moly
-      - bamboo
-      - baobab
-      - raskovnik
-      - tipua
-      - umdhlebi
-      - Yggdrasil
-      - inkvine
-      - rafflesia
-      - treant
-      - ent
-      - athelas
-      - Nimloth
-      - titan arum
-      - lotus
-      - fern
-      - wolfsbane
-      - hoya
-      - oak
-      - elm
-      - ash
-      - oak
-      - creeper
-      - ivy
-      - kudzu
-      - loosestrife
-      - strangler fig
-      - rose
-      - chicory
-      - cinnamon
-      - mint
-      - dandelion
-      - lily
-      - daisy
-      - pine
-      - aspen
-      - creosote
-      - hazel
-      - quaking
-      - poplar
-      - willow
-      - maple
-      - hibiscus
-      - calluna
-      - jasmine
-      - jasper
-      - sage
-      - rosemary
-      - bottlebrush
-    parts:
-      solid:
-        - leaf
-        - stem
-        - twig
-        - branch
-        - root
-        - bark
-        - bud
-        - flower
-        - petal
-        - pistil
-        - stamen
-        - fruit
-        - seed
-      liquid:
-        - sap
-        - dew
-        - xylem
-        - phloem
-      intangible:
-        - shadow
-        - scent
-        - essence
-        - touch
-        - memory
-  general:
-    discrete:
-      - toadstool
-      - chanterelle
-      - shiitake
-      - pleurotus
-      - enoki
-      - yellowjacket
-      - locust
-      - harvestman
-      - flea
-      - butterfly
-      - moth
-      - centipede
-      - millipede
-      - mantis
-      - termite
-      - dragonfly
-      - ant
-      - mealworm
-      - scorpion
-      - mite
-      - spider
-      - solifuge
-      - worm
-      - mollusk
-      - snail
-      - cockle
-    solid:
-      - frost
-      - rot
-      - mildew
-      - quartz
-      - granite
-      - carbon
-      - coal
-      - char
-      - platinum
-      - gold
-      - silver
-      - copper
-      - brass
-      - lead
-      - gravel
-      - calcium
-      - potassium
-      - sodium
-      - lithium
-      - magnesium
-      - boron
-      - arsenic
-      - phosphorus
-      - silicon
-      - gallium
-      - aluminum
-      - tin
-      - antimony
-      - zinc
-      - cobalt
-      - iron
-      - chromium
-      - iridium
-      - tungsten
-      - tantalum
-      - plutonium
-      - cadmium
-      - bismuth
-      - polonium
-      - cesium
-    liquid:
-      - water
-      - alcohol
-      - brine
-      - mud
-      - mercury
-      - nitrogen
-      - neon
-      - helium
-      - æther
-      - flux
-      - caloric
-    intangible:
-      - sorrow
-      - joy
-      - love
-      - shadow
-      - darkness
-      - corruption
-      - sanctity
-      - sunlight
-      - starlight
-      - moongleam
-      - mist
-      - haze
-      - secret
-      - idealism
-      - pragmatism
-      - science
-      - superstition
-      - hope
-      - despair
-      - fear
-      - luck
-      - life
-      - death
-      - trouble
-      - laughter
+    leaf: solid
+    stem: solid
+    twig: solid
+    branch: solid
+    root: solid
+    bark: solid
+    bud: solid
+    flower: solid
+    petal: solid
+    pistil: solid
+    stamen: solid
+    fruit: solid
+    seed: solid
+    sap: liquid
+    dew: liquid
+    xylem: liquid
+    phloem: liquid
+    shadow: intangible
+    scent: intangible
+    essence: intangible
+    touch: intangible
+    memory: intangible
+ingredients:
+  man:
+    type: animal
+    parts: true
+  leprechaun:
+    type: animal
+    parts: true
+  hyrax:
+    type: animal
+    parts: true
+  chimera:
+    type: animal
+    parts: true
+  huldra:
+    type: animal
+    parts: true
+  gryphon:
+    type: animal
+    parts: true
+  yeti:
+    type: animal
+    parts: true
+  unicorn:
+    type: animal
+    parts: true
+  wyvern:
+    type: animal
+    parts: true
+  ghoul:
+    type: animal
+    parts: true
+  leviathan:
+    type: animal
+    parts: true
+  basilisk:
+    type: animal
+    parts: true
+  selkie:
+    type: animal
+    parts: true
+  kelpie:
+    type: animal
+    parts: true
+  redcap:
+    type: animal
+    parts: true
+  gnome:
+    type: animal
+    parts: true
+  demon:
+    type: animal
+    parts: true
+  troll:
+    type: animal
+    parts: true
+  wyrm:
+    type: animal
+    parts: true
+  bat:
+    type: animal
+    parts: true
+  newt:
+    type: animal
+    parts: true
+  rat:
+    type: animal
+    parts: true
+  parrot:
+    type: animal
+    parts: true
+  owl:
+    type: animal
+    parts: true
+  swallow:
+    type: animal
+    parts: true
+  heron:
+    type: animal
+    parts: true
+  albatross:
+    type: animal
+    parts: true
+  pidgeon:
+    type: animal
+    parts: true
+  mosasaur:
+    type: animal
+    parts: true
+  gharial:
+    type: animal
+    parts: true
+  crocodile:
+    type: animal
+    parts: true
+  caiman:
+    type: animal
+    parts: true
+  alligator:
+    type: animal
+    parts: true
+  bear:
+    type: animal
+    parts: true
+  monkey:
+    type: animal
+    parts: true
+  lemur:
+    type: animal
+    parts: true
+  fowl:
+    type: animal
+    parts: true
+  fox:
+    type: animal
+    parts: true
+  chameleon:
+    type: animal
+    parts: true
+  lungfish:
+    type: animal
+    parts: true
+  tarsir:
+    type: animal
+    parts: true
+  okapi:
+    type: animal
+    parts: true
+  lynx:
+    type: animal
+    parts: true
+  caribou:
+    type: animal
+    parts: true
+  rhinoceros:
+    type: animal
+    parts: true
+  shrew:
+    type: animal
+    parts: true
+  tanuki:
+    type: animal
+    parts: true
+  eel:
+    type: animal
+    parts: true
+  shad:
+    type: animal
+    parts: true
+  loach:
+    type: animal
+    parts: true
+  carp:
+    type: animal
+    parts: true
+  shark:
+    type: animal
+    parts: true
+  rhipidistian:
+    type: animal
+    parts: true
+  toad:
+    type: animal
+    parts: true
+  salamander:
+    type: animal
+    parts: true
+  dog:
+    type: animal
+    parts: true
+  ocelot:
+    type: animal
+    parts: true
+  marsupial:
+    type: animal
+    parts: true
+  squirrel:
+    type: animal
+    parts: true
+  baboon:
+    type: animal
+    parts: true
+  monotreme:
+    type: animal
+    parts: true
+  otter:
+    type: animal
+    parts: true
+  gibbon:
+    type: animal
+    parts: true
+  mouse:
+    type: animal
+    parts: true
+  rat:
+    type: animal
+    parts: true
+  sloth:
+    type: animal
+    parts: true
+  hedgehog:
+    type: animal
+    parts: true
+  ungulate:
+    type: animal
+    parts: true
+  anteater:
+    type: animal
+    parts: true
+  possum:
+    type: animal
+    parts: true
+  echidna:
+    type: animal
+    parts: true
+  pangolin:
+    type: animal
+    parts: true
+  serpent:
+    type: animal
+    parts: true
+  wombat:
+    type: animal
+    parts: true
+  elephant:
+    type: animal
+    parts: true
+  bovine:
+    type: animal
+    parts: true
+  peccary:
+    type: animal
+    parts: true
+  triffid:
+    type: plant
+    parts: true
+  hungry grass:
+    type: plant
+    parts: true
+  vegetable lamb:
+    type: plant
+    parts: true
+  mandrake:
+    type: plant
+    parts: true
+  Green Man:
+    type: plant
+    parts: true
+  moly:
+    type: plant
+    parts: true
+  bamboo:
+    type: plant
+    parts: true
+  baobab:
+    type: plant
+    parts: true
+  raskovnik:
+    type: plant
+    parts: true
+  tipua:
+    type: plant
+    parts: true
+  umdhlebi:
+    type: plant
+    parts: true
+  Yggdrasil:
+    type: plant
+    parts: true
+  inkvine:
+    type: plant
+    parts: true
+  rafflesia:
+    type: plant
+    parts: true
+  treant:
+    type: plant
+    parts: true
+  ent:
+    type: plant
+    parts: true
+  athelas:
+    type: plant
+    parts: true
+  Nimloth:
+    type: plant
+    parts: true
+  titan arum:
+    type: plant
+    parts: true
+  lotus:
+    type: plant
+    parts: true
+  fern:
+    type: plant
+    parts: true
+  wolfsbane:
+    type: plant
+    parts: true
+  hoya:
+    type: plant
+    parts: true
+  oak:
+    type: plant
+    parts: true
+  elm:
+    type: plant
+    parts: true
+  ash:
+    type: plant
+    parts: true
+  oak:
+    type: plant
+    parts: true
+  creeper:
+    type: plant
+    parts: true
+  ivy:
+    type: plant
+    parts: true
+  kudzu:
+    type: plant
+    parts: true
+  loosestrife:
+    type: plant
+    parts: true
+  strangler fig:
+    type: plant
+    parts: true
+  rose:
+    type: plant
+    parts: true
+  chicory:
+    type: plant
+    parts: true
+  cinnamon:
+    type: plant
+    parts: true
+  mint:
+    type: plant
+    parts: true
+  dandelion:
+    type: plant
+    parts: true
+  lily:
+    type: plant
+    parts: true
+  daisy:
+    type: plant
+    parts: true
+  pine:
+    type: plant
+    parts: true
+  aspen:
+    type: plant
+    parts: true
+  creosote:
+    type: plant
+    parts: true
+  hazel:
+    type: plant
+    parts: true
+  quaking:
+    type: plant
+    parts: true
+  poplar:
+    type: plant
+    parts: true
+  willow:
+    type: plant
+    parts: true
+  maple:
+    type: plant
+    parts: true
+  hibiscus:
+    type: plant
+    parts: true
+  calluna:
+    type: plant
+    parts: true
+  jasmine:
+    type: plant
+    parts: true
+  jasper:
+    type: plant
+    parts: true
+  sage:
+    type: plant
+    parts: true
+  rosemary:
+    type: plant
+    parts: true
+  bottlebrush:
+    type: plant
+    parts: true
+  toadstool:
+    type: fungus
+    parts: false
+  chanterelle:
+    type: fungus
+    parts: false
+  shiitake:
+    type: fungus
+    parts: false
+  pleurotus:
+    type: fungus
+    parts: false
+  enoki:
+    type: fungus
+    parts: false
+  yellowjacket:
+    type: animal
+    parts: false
+  locust:
+    type: animal
+    parts: false
+  harvestman:
+    type: animal
+    parts: false
+  flea:
+    type: animal
+    parts: false
+  butterfly:
+    type: animal
+    parts: false
+  moth:
+    type: animal
+    parts: false
+  centipede:
+    type: animal
+    parts: false
+  millipede:
+    type: animal
+    parts: false
+  mantis:
+    type: animal
+    parts: false
+  termite:
+    type: animal
+    parts: false
+  dragonfly:
+    type: animal
+    parts: false
+  ant:
+    type: animal
+    parts: false
+  mealworm:
+    type: animal
+    parts: false
+  scorpion:
+    type: animal
+    parts: false
+  mite:
+    type: animal
+    parts: false
+  spider:
+    type: animal
+    parts: false
+  solifuge:
+    type: animal
+    parts: false
+  worm:
+    type: animal
+    parts: false
+  mollusk:
+    type: animal
+    parts: false
+  snail:
+    type: animal
+    parts: false
+  cockle:
+    type: animal
+    parts: false
+  frost:
+    type: solid
+    parts: false
+  rot:
+    type: solid
+    parts: false
+  mildew:
+    type: solid
+    parts: false
+  quartz:
+    type: solid
+    parts: false
+  granite:
+    type: solid
+    parts: false
+  carbon:
+    type: solid
+    parts: false
+  coal:
+    type: solid
+    parts: false
+  char:
+    type: solid
+    parts: false
+  platinum:
+    type: solid
+    parts: false
+  gold:
+    type: solid
+    parts: false
+  silver:
+    type: solid
+    parts: false
+  copper:
+    type: solid
+    parts: false
+  brass:
+    type: solid
+    parts: false
+  lead:
+    type: solid
+    parts: false
+  gravel:
+    type: solid
+    parts: false
+  calcium:
+    type: solid
+    parts: false
+  potassium:
+    type: solid
+    parts: false
+  sodium:
+    type: solid
+    parts: false
+  lithium:
+    type: solid
+    parts: false
+  magnesium:
+    type: solid
+    parts: false
+  boron:
+    type: solid
+    parts: false
+  arsenic:
+    type: solid
+    parts: false
+  phosphorus:
+    type: solid
+    parts: false
+  silicon:
+    type: solid
+    parts: false
+  gallium:
+    type: solid
+    parts: false
+  aluminum:
+    type: solid
+    parts: false
+  tin:
+    type: solid
+    parts: false
+  antimony:
+    type: solid
+    parts: false
+  zinc:
+    type: solid
+    parts: false
+  cobalt:
+    type: solid
+    parts: false
+  iron:
+    type: solid
+    parts: false
+  chromium:
+    type: solid
+    parts: false
+  iridium:
+    type: solid
+    parts: false
+  tungsten:
+    type: solid
+    parts: false
+  tantalum:
+    type: solid
+    parts: false
+  plutonium:
+    type: solid
+    parts: false
+  cadmium:
+    type: solid
+    parts: false
+  bismuth:
+    type: solid
+    parts: false
+  polonium:
+    type: solid
+    parts: false
+  cesium:
+    type: solid
+    parts: false
+  water:
+    type: liquid
+    parts: false
+  alcohol:
+    type: liquid
+    parts: false
+  brine:
+    type: liquid
+    parts: false
+  mud:
+    type: liquid
+    parts: false
+  mercury:
+    type: liquid
+    parts: false
+  nitrogen:
+    type: liquid
+    parts: false
+  neon:
+    type: liquid
+    parts: false
+  helium:
+    type: liquid
+    parts: false
+  æther:
+    type: liquid
+    parts: false
+  flux:
+    type: liquid
+    parts: false
+  caloric:
+    type: liquid
+    parts: false
+  sorrow:
+    type: intangible
+    parts: false
+  joy:
+    type: intangible
+    parts: false
+  love:
+    type: intangible
+    parts: false
+  shadow:
+    type: intangible
+    parts: false
+  darkness:
+    type: intangible
+    parts: false
+  corruption:
+    type: intangible
+    parts: false
+  sanctity:
+    type: intangible
+    parts: false
+  sunlight:
+    type: intangible
+    parts: false
+  starlight:
+    type: intangible
+    parts: false
+  moongleam:
+    type: intangible
+    parts: false
+  mist:
+    type: intangible
+    parts: false
+  haze:
+    type: intangible
+    parts: false
+  secret:
+    type: intangible
+    parts: false
+  idealism:
+    type: intangible
+    parts: false
+  pragmatism:
+    type: intangible
+    parts: false
+  science:
+    type: intangible
+    parts: false
+  superstition:
+    type: intangible
+    parts: false
+  hope:
+    type: intangible
+    parts: false
+  despair:
+    type: intangible
+    parts: false
+  fear:
+    type: intangible
+    parts: false
+  luck:
+    type: intangible
+    parts: false
+  life:
+    type: intangible
+    parts: false
+  death:
+    type: intangible
+    parts: false
+  trouble:
+    type: intangible
+    parts: false
+  laughter:
+    type: intangible
+    parts: false
 

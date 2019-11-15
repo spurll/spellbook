@@ -41,20 +41,16 @@ locales = load_yaml(path.join(basedir, LOCALES))
 actions = load_yaml(path.join(basedir, ACTIONS))
 components = load_yaml(path.join(basedir, COMPONENTS))
 
-parts = [
-    p
-    for t in ('solid', 'liquid')
-    for p in components['ingredients']['animal']['parts'][t]
-]
+parts = [p for p in components['parts']['animal']]
 
-summons = (
-    [a for a in components['ingredients']['animal']['types']] +
-    [p for p in components['ingredients']['plant']['types']] +
-    [i for i in components['ingredients']['general']['discrete']]
-)
+summons = [
+    k for k, v in components['ingredients'].items()
+    if v['type'] in ('animal', 'plant', 'fungus')
+]
 
 counts = ['¼', '½', '¾'] + list(range(1, 9))
 plurals = [False] * 4 + [True] * 7
+
 
 def generate(outfile):
     authors = [name() for _ in range(7)]
@@ -233,6 +229,7 @@ def generate_page(authors):
         # TODO: Include occasional attributes
         # TODO: If discrete, pluralize component if necessary
         # TODO: If not discrete, pluralize the measurement if necessary
+        # TODO: If an animal with no parts, add live or dead
 
     # If contains liquid, "pour in... stirring constantly/occasionally"
 
