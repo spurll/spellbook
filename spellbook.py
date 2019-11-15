@@ -7,7 +7,7 @@ import argparse
 import yaml
 import re
 from os import path
-from random import choice
+from random import choice, randint
 
 from words import name, titlecase, wordcount, indefinite, plural
 from maybe import flip, maybe, choice_without
@@ -53,6 +53,8 @@ summons = (
     [i for i in components['ingredients']['general']['discrete']]
 )
 
+counts = ['¼', '½', '¾'] + list(range(1, 9))
+plurals = [False] * 4 + [True] * 7
 
 def generate(outfile):
     authors = [name() for _ in range(7)]
@@ -198,7 +200,7 @@ def generate_page(authors):
 
     if type == 'summoning':
         title += plural(choice(summons))
-    elif type == 'blight' or type == 'cure':
+    elif type in ('blight', 'cure'):
         title += f'{choice(spells["maladies"])} {choice(parts)}'
     else:
         title += choice(spells['subjects'])
@@ -208,15 +210,47 @@ def generate_page(authors):
 
     title = titlecase(title)
 
-    spell = f'## {title}\n\n'
-
     # Generate list of ingredients
-    # TODO
+    items = []
+    ingredients = ''
+    directions = ''
+
+    for _ in range(randint(3, 10)):
+        item = 
+
+        prep = (
+            choice(components['preparations'][type])
+            if type in ('solid', 'liquid') else ''
+        )
+
+        count, plural = (
+            choice(zip(counts, plurals))
+            if type != 'intangible' else (None, False)
+        )
+
+        items.append()
+
+        # TODO: Include occasional attributes
+        # TODO: If discrete, pluralize component if necessary
+        # TODO: If not discrete, pluralize the measurement if necessary
+
+    # If contains liquid, "pour in... stirring constantly/occasionally"
 
     # Generate directions
     # TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
 
     # TODO: Add cautions
+
+
+    # TODO: If a cure, direct how to apply to affected area (e.g., "make a poultice using authors[1]'s standard method and apply to {area} immediately")
+    # TODO: If a curse, direct how to use (e.g., make a mommet, feed directly, etc.)
+    # TODO: If a summoning, how long until "X" starts to appear?
+
+    spell = '\n\n'.join((
+        f'## {title}',
+        f'### Ingredients\n\n{ingredients}',
+        f'### Directions\n\n{directions}',
+    ))
 
     return spell
 

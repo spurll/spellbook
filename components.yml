@@ -18,7 +18,7 @@ preparations:
     - diluted
     - shaken
     - beaten
-variants:
+attributes:
   general:
     - cursed
     - blessed
