@@ -130,6 +130,7 @@ parts:
     saliva: liquid
     milk: liquid
     tear: liquid
+    fat: liquid
     sorrow: intangible
     joy: intangible
     love: intangible
@@ -773,6 +774,12 @@ ingredients:
   cesium:
     type: solid
     parts: false
+  wax:
+    type: solid
+    parts: false
+  tallow:
+    type: solid
+    parts: false
   water:
     type: liquid
     parts: false
@@ -780,6 +787,9 @@ ingredients:
     type: liquid
     parts: false
   brine:
+    type: liquid
+    parts: false
+  oil:
     type: liquid
     parts: false
   mud:

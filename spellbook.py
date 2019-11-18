@@ -186,6 +186,8 @@ def generate_page(authors):
     type = choice(list(spells['spells'].keys()))
     title = choice(spells['spells'][type])
 
+    afflicted = choice(parts) if type in ('blight', 'cure') else None
+
     if flip():
         title = f'{choice(spells["attributes"])} {title}'
 
@@ -197,7 +199,7 @@ def generate_page(authors):
     if type == 'summoning':
         title += plural(choice(summons))
     elif type in ('blight', 'cure'):
-        title += f'{choice(spells["maladies"])} {choice(parts)}'
+        title += f'{choice(spells["maladies"])} {afflicted}'
     else:
         title += choice(spells['subjects'])
 
@@ -216,8 +218,6 @@ def generate_page(authors):
         item = choice(list(components['ingredients'].items()))
         item[1]['name'] = item[0]
         item = item[1]
-
-        items.append(item)
 
         part = (
             choice(list(components['parts'][item['type']].items()))
@@ -243,6 +243,8 @@ def generate_page(authors):
 
             current = f'{part[0]} of {item["name"]}' if part else item['name']
 
+            items.append({'ingredient': current, 'type': type})
+
             current = ' '.join((
                 str(count),
                 plural(measure) if pluralize else measure,
@@ -263,6 +265,8 @@ def generate_page(authors):
             if pluralize:
                 current = plural(current)
 
+            items.append({'ingredient': current, 'type': type})
+
             if maybe(0.25):
                 current = f'{choice(attributes)} {current}'
 
@@ -270,6 +274,9 @@ def generate_page(authors):
                 current = f'{count} {current}'
 
         ingredients += f'* {current}\n'
+
+    for i in items:
+        pass
 
     # If contains liquid, "pour in... stirring constantly/occasionally"
     # flip() heat cauldron over
@@ -280,12 +287,61 @@ def generate_page(authors):
 
     # TODO: Add cautions
 
+    # Even though it's inefficient, build every possible set of directions,
+    # then choose one, because otherwise the code becomes very bad
+    liquid = any(i['type'] == 'liquid' for i in items)
+    time = randint(1, 5)
+    time = f'{time} to {time + randint(time + 1, time + 3)} hours'
 
-    # TODO: If a cure, direct how to apply to affected area (e.g., "make a poultice using authors[1]'s standard method and apply to {area} immediately")
-    # TODO: If a cure, one option is "Apply directly to the forehead."
-    # TODO: If a curse, direct how to use (e.g., make a mommet, feed directly, etc.)
-    # TODO: If a summoning, how long until "X" starts to appear?
+    options = [
+        'Heat until all of the liquid has boiled away and the black fumes have'
+        ' blotted out the great and minor lights of the sky.',
 
+        'Bring to a rolling boil and have the subject inhale the vapours for '
+        f'{time}, or until the illness passes.'
+         if type == 'cure' and liquid else None,
+
+        'Bring to a rolling boil and steep a length of bandage for {time}. ' +
+        ('Still hot, ' if flip() else 'Let cool, then ') +
+        f'apply the bandages to {afflicted}, wrapping ' +
+        ('tightly.' if flip() else 'loosely.')
+        if type == 'cure' and liquid else None,
+
+        f"Make a poultice using {authors[1]}'s standard method. Apply to "
+        f'{afflicted} immediately.'
+        if type == 'cure' and liquid else None,
+
+        f'With {"gloved" if flip() else "bare"} hands, fold a small measure of'
+        ' the curative into an equal amount of wax or tallow, the massage into'
+        f" the subject's {afflicted}."
+        if type == 'cure' else None,
+
+        f'With {"gloved" if flip() else "bare"} hands, apply the curative to '
+        f'the {afflicted} directly, then bandage.'
+        if type == 'cure' else None,
+
+        'Sprinkle a loose handful of the compound over the subject' +
+        (f"'s {afflicted}," if type in ('cure', 'curse') else ',') +
+        (
+            'mouthing the standard invocations.' if flip() else
+            'forming the standard signs with the left hand.'
+        ) if type not in ('general', 'summoning'),
+
+        f'Ensure that the subject ingests the compound within {time}, to '
+        'ensure maximum effectiveness.'
+        if type not in ('general', 'summoning'),
+
+        'Apply directly to the forehead.'
+        if type not in ('general', 'summoning'),
+
+        # TODO Make a momment if curse
+        # TODO add a strand of hair if curse
+        # TODO: If a summoning, how long until "X" starts to appear?
+        # TODO: Add more summoning options
+        # TODO: Add more general options
+    ]
+
+    directions += '\n\n' + choice([o for o in options if o])
 
     spell = '\n\n'.join((
         f'## {title}',
