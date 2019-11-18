@@ -280,13 +280,26 @@ def generate_page(authors):
 
     # If contains liquid, "pour in... stirring constantly/occasionally"
     # flip() heat cauldron over
-    # dig a hole six foot by three
 
     # Generate directions
     # TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
 
+    # TODO Make sure everything in the YAMLs is used (e.g., list of limbs)
+
     # TODO: Add cautions
 
+    directions += '\n\n' + final_direction(type, afflicted, items, authors)
+
+    spell = '\n\n'.join((
+        f'## {title}',
+        f'### Ingredients\n\n{ingredients}',
+        f'### Directions\n\n{directions}',
+    ))
+
+    return spell
+
+
+def final_directions(type, afflicted, items, authors):
     # Even though it's inefficient, build every possible set of directions,
     # then choose one, because otherwise the code becomes very bad
     liquid = any(i['type'] == 'liquid' for i in items)
@@ -297,12 +310,22 @@ def generate_page(authors):
         'Heat until all of the liquid has boiled away and the black fumes have'
         ' blotted out the great and minor lights of the sky.',
 
+        'Take a handful and scatter it in a loose circle.',
+
+        'Take a fistful and scatter it to the wind.',
+
+        'Take a pinch between thumb and forefinger and inhale deeply.',
+
+        f'Speak the {randint(2, 9)} forbidden words, then submerge one arm '
+        'in the compound up to the elbow and withdraw.'
+        if type not in ('curse', 'blight', 'cure') and liquid else None,
+
         'Bring to a rolling boil and have the subject inhale the vapours for '
-        f'{time}, or until the illness passes.'
+        f'{time} hours, or until the illness passes.'
          if type == 'cure' and liquid else None,
 
-        'Bring to a rolling boil and steep a length of bandage for {time}. ' +
-        ('Still hot, ' if flip() else 'Let cool, then ') +
+        'Bring to a rolling boil and steep a length of bandage for {time} ' +
+        'hours.' + ('Still hot, ' if flip() else 'Let cool, then ') +
         f'apply the bandages to {afflicted}, wrapping ' +
         ('tightly.' if flip() else 'loosely.')
         if type == 'cure' and liquid else None,
@@ -325,31 +348,38 @@ def generate_page(authors):
         (
             'mouthing the standard invocations.' if flip() else
             'forming the standard signs with the left hand.'
-        ) if type not in ('general', 'summoning'),
+        ) if type not in ('general', 'summoning') else None,
 
-        f'Ensure that the subject ingests the compound within {time}, to '
-        'ensure maximum effectiveness.'
-        if type not in ('general', 'summoning'),
+        f'Ensure that the subject ingests the compound within {time} hours, to'
+        ' ensure maximum effectiveness.'
+        if type not in ('general', 'summoning') else None,
 
         'Apply directly to the forehead.'
-        if type not in ('general', 'summoning'),
+        if type not in ('general', 'summoning') else None,
 
-        # TODO Make a momment if curse
-        # TODO add a strand of hair if curse
+        f"Following {author[2]}'s three maxims, create a wax simulacrum of the"
+        ' target. Submerge in the brew, and boil until all liquid has '
+        'evaporated.'
+        if type in ('curse', 'blight') and liquid else None,
+
+        f"Following {author[3]}'s four precepts, create a cloth manikin of the"
+        ' target. Coat liberally with the compound, then burn. Scatter the '
+        'ashes.'
+        if type in ('curse', 'blight') else None,
+
+        "Take a single strand of the target's hair, break it in two, and add "
+        'it to the concoction, mixing thoroughly.'
+        if type in ('curse', 'blight') else None,
+
+        'Dig a hole six feet deep and bury. Excavate after the spring thaw.'
+        if type == 'general' else None,
+
         # TODO: If a summoning, how long until "X" starts to appear?
         # TODO: Add more summoning options
         # TODO: Add more general options
     ]
-
-    directions += '\n\n' + choice([o for o in options if o])
-
-    spell = '\n\n'.join((
-        f'## {title}',
-        f'### Ingredients\n\n{ingredients}',
-        f'### Directions\n\n{directions}',
-    ))
-
-    return spell
+    
+    return choice([o for o in options if o])
 
 
 def main():
