@@ -236,7 +236,8 @@ def generate_page(authors):
             count, pluralize = None, False
 
         if type in ('solid', 'liquid'):
-            attributes += components['attributes'][type]
+            # Note no +=! For lists, += modifies the original list!
+            attributes = attributes + components['attributes'][type]
             attribute = choice(attributes) if maybe(0.25) else None
             measure = choice(components['measures'][type])
 
@@ -252,7 +253,12 @@ def generate_page(authors):
                 current += f', {choice(components["preparations"][type])}'
 
         else:
-            current = f'{part[0]} of {item["name"]}' if part else item['name']
+            current = item['name']
+
+            if part:
+                current = f'{part[0]} of {current}'
+            elif type == 'animal' and flip():
+                current = f'live {current}'
 
             if pluralize:
                 current = plural(current)
@@ -265,11 +271,9 @@ def generate_page(authors):
 
         ingredients += f'* {current}\n'
 
-    # TODO: If an animal with no parts, add live or dead
-
-    # TODO: For some reason, solid attributes are showing up where they shouldn't
-
     # If contains liquid, "pour in... stirring constantly/occasionally"
+    # flip() heat cauldron over
+    # dig a hole six foot by three
 
     # Generate directions
     # TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
@@ -278,8 +282,10 @@ def generate_page(authors):
 
 
     # TODO: If a cure, direct how to apply to affected area (e.g., "make a poultice using authors[1]'s standard method and apply to {area} immediately")
+    # TODO: If a cure, one option is "Apply directly to the forehead."
     # TODO: If a curse, direct how to use (e.g., make a mommet, feed directly, etc.)
     # TODO: If a summoning, how long until "X" starts to appear?
+
 
     spell = '\n\n'.join((
         f'## {title}',
