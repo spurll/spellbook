@@ -55,7 +55,20 @@ def name():
     return f'{first} {"of " if maybe(0.25) else ""}{word().capitalize()}'
 
 
+def capitalize(str):
+    """
+    Capitalizes the first letter without changing the case of any other
+    letters.
+    """
+    return str[0].upper() + str[1:] if str else str
+
+
 def titlecase(str):
+    """
+    Capitalizes each word, except those in a proscribed list (e.g., articles,
+    short prepositions, etc.). Note: all whitespace is replaced by single space
+    characters.
+    """
     return ' '.join(
         w.capitalize() if i == 0 or w not in LOWER_TITLE else w
         for i, w in enumerate(str.split())

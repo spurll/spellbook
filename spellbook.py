@@ -9,7 +9,7 @@ import re
 from os import path
 from random import choice, randint
 
-from words import name, titlecase, wordcount, indefinite, plural
+from words import name, capitalize, titlecase, wordcount, indefinite, plural
 from maybe import flip, maybe, choice_without
 
 
@@ -187,6 +187,7 @@ def generate_page(authors):
     title = choice(spells['spells'][type])
 
     afflicted = choice(parts) if type in ('blight', 'cure') else None
+    target = plural(choice(summons))
 
     if flip():
         title = f'{choice(spells["attributes"])} {title}'
@@ -197,7 +198,7 @@ def generate_page(authors):
         title += ' of '
 
     if type == 'summoning':
-        title += plural(choice(summons))
+        title += target
     elif type in ('blight', 'cure'):
         title += f'{choice(spells["maladies"])} {afflicted}'
     else:
@@ -288,7 +289,8 @@ def generate_page(authors):
 
     # TODO: Add cautions
 
-    directions += '\n\n' + final_direction(type, afflicted, items, authors)
+    if flip():
+        directions += '\n\n' + final(type, afflicted, items, authors, target)
 
     spell = '\n\n'.join((
         f'## {title}',
@@ -299,12 +301,10 @@ def generate_page(authors):
     return spell
 
 
-def final_directions(type, afflicted, items, authors):
+def final(type, afflicted, items, authors, target):
     # Even though it's inefficient, build every possible set of directions,
     # then choose one, because otherwise the code becomes very bad
     liquid = any(i['type'] == 'liquid' for i in items)
-    time = randint(1, 5)
-    time = f'{time} to {time + randint(time + 1, time + 3)} hours'
 
     options = [
         'Heat until all of the liquid has boiled away and the black fumes have'
@@ -316,21 +316,36 @@ def final_directions(type, afflicted, items, authors):
 
         'Take a pinch between thumb and forefinger and inhale deeply.',
 
-        f'Speak the {randint(2, 9)} forbidden words, then submerge one arm '
-        'in the compound up to the elbow and withdraw.'
+        'Paint face, arms, and chest with the compound. The spell will take '
+        'hold within seconds.',
+
+        'Hum softly as you scatter the contents.',
+
+        'Move one forefinger through the mixture, making the approved sigils '
+        'and signs, then discard.',
+
+        "Chant your preferred invocations over the compound ({author[1]'s " + 
+        ('Poem of Power' if flip() else 'Song of Sanctity') +
+        ' recommended), then reserve for future use.',
+
+        'The mixture should be shaken, then imbibed while making the '
+        'appropriate runic gestures with the left hand.',
+
+        f'Speak the seven forbidden words, then submerge one arm in the '
+        'compound up to the elbow and withdraw.'
         if type not in ('curse', 'blight', 'cure') and liquid else None,
 
         'Bring to a rolling boil and have the subject inhale the vapours for '
-        f'{time} hours, or until the illness passes.'
+        f'{srange()} hours, or until the illness passes.'
          if type == 'cure' and liquid else None,
 
-        'Bring to a rolling boil and steep a length of bandage for {time} ' +
-        'hours.' + ('Still hot, ' if flip() else 'Let cool, then ') +
+        f'Bring to a rolling boil and steep a length of bandage for {srange()}'
+        ' hours.' + ('Still hot, ' if flip() else 'Let cool, then ') +
         f'apply the bandages to {afflicted}, wrapping ' +
         ('tightly.' if flip() else 'loosely.')
         if type == 'cure' and liquid else None,
 
-        f"Make a poultice using {authors[1]}'s standard method. Apply to "
+        f"Make a poultice using {authors[2]}'s standard method. Apply to "
         f'{afflicted} immediately.'
         if type == 'cure' and liquid else None,
 
@@ -350,19 +365,19 @@ def final_directions(type, afflicted, items, authors):
             'forming the standard signs with the left hand.'
         ) if type not in ('general', 'summoning') else None,
 
-        f'Ensure that the subject ingests the compound within {time} hours, to'
-        ' ensure maximum effectiveness.'
+        f'Ensure that the subject ingests the compound within {srange()} '
+        'hours, to ensure maximum effectiveness.'
         if type not in ('general', 'summoning') else None,
 
         'Apply directly to the forehead.'
         if type not in ('general', 'summoning') else None,
 
-        f"Following {author[2]}'s three maxims, create a wax simulacrum of the"
+        f"Following {author[3]}'s three maxims, create a wax simulacrum of the"
         ' target. Submerge in the brew, and boil until all liquid has '
         'evaporated.'
         if type in ('curse', 'blight') and liquid else None,
 
-        f"Following {author[3]}'s four precepts, create a cloth manikin of the"
+        f"Following {author[4]}'s four precepts, create a cloth manikin of the"
         ' target. Coat liberally with the compound, then burn. Scatter the '
         'ashes.'
         if type in ('curse', 'blight') else None,
@@ -373,13 +388,22 @@ def final_directions(type, afflicted, items, authors):
 
         'Dig a hole six feet deep and bury. Excavate after the spring thaw.'
         if type == 'general' else None,
-
-        # TODO: If a summoning, how long until "X" starts to appear?
-        # TODO: Add more summoning options
-        # TODO: Add more general options
     ]
-    
-    return choice([o for o in options if o])
+
+    final_direction = choice([o for o in options if o])
+
+    if type == 'summoning':
+        final_direction += (
+            f' {srange()} {target} should begin to appear within ' +
+            ('seconds.' if flip() else 'minutes.' if flip() else 'hours.')
+        )
+
+    return final_direction
+
+
+def srange():
+    start = randint(1, 5)
+    return f'{start} to {start + randint(start + 1, start + 3)}'
 
 
 def main():
