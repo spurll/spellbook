@@ -63,6 +63,14 @@ def capitalize(str):
     return str[0].upper() + str[1:] if str else str
 
 
+def uncapitalize(str):
+    """
+    Lowercases the first letter without changing the case of any other
+    letters.
+    """
+    return str[0].lower() + str[1:] if str else str
+
+
 def titlecase(str):
     """
     Capitalizes each word, except those in a proscribed list (e.g., articles,
@@ -76,7 +84,8 @@ def titlecase(str):
 
 
 def wordcount(*args):
-    """Double-counts hyphenated words, but oh well."""
+    # Ensure that hyphenated words aren't counted as two by replacing hyphens
+    args = [str.replace('-', '_') for str in args]
     return sum((len(re.findall(r'\b\w', str)) for str in args))
 
 

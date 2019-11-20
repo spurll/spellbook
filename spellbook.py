@@ -9,8 +9,10 @@ import re
 from os import path
 from random import choice, randint
 
-from words import name, capitalize, titlecase, wordcount, indefinite, plural
 from maybe import flip, maybe, choice_without
+from words import (
+    name, capitalize, uncapitalize, titlecase, wordcount, indefinite, plural
+)
 
 
 CONFIG = 'config.yml'
@@ -276,21 +278,21 @@ def generate_page(authors):
 
         ingredients += f'* {current}\n'
 
-    for i in items:
-        pass
-
-    # If contains liquid, "pour in... stirring constantly/occasionally"
-    # flip() heat cauldron over
+    liquid = any(i['type'] == 'liquid' for i in items)
 
     # Generate directions
-    # TODO: Add directions (e.g., on a misty morning, facing west, facing a rising Mercury, under the sign of Sagitarius)
+    directions = initial(type, liquid)
+
+    for i in items:
+        directions += 'DO SOMETHING'
+        # If contains liquid, "pour in... stirring constantly/occasionally"
 
     # TODO Make sure everything in the YAMLs is used (e.g., list of limbs)
 
     # TODO: Add cautions
 
     if flip():
-        directions += '\n\n' + final(type, afflicted, items, authors, target)
+        directions += '\n\n' + final(type, afflicted, liquid, authors, target)
 
     spell = '\n\n'.join((
         f'## {title}',
@@ -301,11 +303,67 @@ def generate_page(authors):
     return spell
 
 
-def final(type, afflicted, items, authors, target):
+def initial(type, liquid):
+    options = [
+        'Prepare a ' + choice(['broad ', 'shallow ']) +
+        choice(['stone mortar and pestle.', 'hardwood mortar and pestle '
+            '(acacia preferred, though oak will do).']),
+
+        'Heat a cauldron over a well-banked fire of ' +
+        choice(['rowen.', 'ash and yew.'])
+        if liquid else None,
+
+        'Place a ' + choice('copper', 'brass', 'gold', 'silver', 'iron') +
+        'boiler over a brazier and etch with runes while it heats.'
+        if liquid else None,
+
+        'Array components on a ' + choice(['linen ', 'wool ', 'tartan ']) +
+        'sheet according to gestalt principles.',
+        if not liquid else None,
+
+        'Ready a vessel composed of a ' + choice(['non-', '']) +
+        'ferromagnetic metal (if unsure of its composition, test with a '
+        'lodestone).',
+
+        'Ready a ' + choice(['clay', 'stone', 'wooden', 'granite', 'quartz']) +
+        ' vessel and chill until frost is just visible.'
+    ]
+
+    direction = choice([o for o in options if o])
+
+    if flip():
+        options = [
+            'On a ' + choice(['misty', 'cloudy', 'rainy', 'dry', 'humid']) +
+            + choice([' morning', ' day', ' afternoon', ' evening', ' night']),
+
+            'Facing ' + choice(['north', 'south', 'east', 'west']),
+
+            'Under a ' +
+            choice(['waxing', 'waning', 'gibbous', 'crescent', 'full', 'new'])
+            + ' moon',
+
+            'With a ' + choice(['rising ', 'setting ']) + choice([
+                'sun', 'moon', 'Mercury', 'Mars', 'Venus',
+            ]) + ' in the sky',
+
+            'Under the sign of ' + choice([
+                'Capricorn', 'Gemini', 'Pisces', 'Virgo', 'Cancer', 'Leo',
+                'Aquarius', 'Taurus', 'Libra', 'Scorpius', 'Aries',
+                'Sagittarius', 'Ophiuchus', 'Cassiopeia', 'Orion'
+            ])
+
+            'After aligning yourself ' + choice(['parallel', 'perpendicular'])
+            + ' to the ' + choice(['governing', 'major', 'minor']) + ' leyline'
+        ]
+
+        direction = f'{choice(options)}, {uncapitalize(direction)}'
+
+    return direction
+
+
+def final(type, afflicted, liquid, authors, target):
     # Even though it's inefficient, build every possible set of directions,
     # then choose one, because otherwise the code becomes very bad
-    liquid = any(i['type'] == 'liquid' for i in items)
-
     options = [
         'Heat until all of the liquid has boiled away and the black fumes have'
         ' blotted out the great and minor lights of the sky.',
@@ -390,15 +448,15 @@ def final(type, afflicted, items, authors, target):
         if type == 'general' else None,
     ]
 
-    final_direction = choice([o for o in options if o])
+    direction = choice([o for o in options if o])
 
     if type == 'summoning':
-        final_direction += (
+        direction += (
             f' {srange()} {target} should begin to appear within ' +
             ('seconds.' if flip() else 'minutes.' if flip() else 'hours.')
         )
 
-    return final_direction
+    return direction
 
 
 def srange():
