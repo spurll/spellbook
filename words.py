@@ -71,6 +71,15 @@ def uncapitalize(str):
     return str[0].lower() + str[1:] if str else str
 
 
+def oxford(strings):
+    """Joins strings using the serial comma standard."""
+    if len(strings) < 2:
+        return ''.join(strings)
+    if len(strings) == 2:
+        return ' and '.join(strings)
+    return ', '.join(strings[:-1]) + f', and {strings[-1]}'
+
+
 def titlecase(str):
     """
     Capitalizes each word, except those in a proscribed list (e.g., articles,

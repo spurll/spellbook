@@ -11,7 +11,8 @@ from random import choice, randint
 
 from maybe import flip, maybe, choice_without
 from words import (
-    name, capitalize, uncapitalize, titlecase, wordcount, indefinite, plural
+    name, capitalize, uncapitalize, titlecase, oxford, wordcount, indefinite,
+    plural
 )
 
 
@@ -52,6 +53,13 @@ summons = [
 
 counts = ['¼', '½', '¾'] + list(range(1, 9))
 plurals = [False] * 4 + [True] * 7
+
+
+# TODO Add gestures, gesticulations, etc. in between ingredients
+
+# TODO Move directions and ingredients into their own functions and refactor
+
+# TODO Make sure everything in the YAMLs is used (e.g., list of limbs)
 
 
 def generate(outfile):
@@ -177,31 +185,31 @@ def generate_cover(title, authors):
         if maybe(0.2):
             cover += f'\n\n{role.capitalize()} by {name()}'
 
-    authors = ', '.join(authors[1:-2]) + f', and {authors[-1]}'
-    cover += f'\n\nWith thanks to {authors} for their contributions.'
+    contributors = oxford(authors[2:])
+    cover += f'\n\nWith thanks to {contributors} for their contributions.'
 
     return cover
 
 
 def generate_page(authors):
     # Generate spell title
-    type = choice(list(spells['spells'].keys()))
-    title = choice(spells['spells'][type])
+    spell = choice(list(spells['spells'].keys()))
+    title = choice(spells['spells'][spell])
 
-    afflicted = choice(parts) if type in ('blight', 'cure') else None
+    afflicted = choice(parts) if spell in ('blight', 'cure') else None
     target = plural(choice(summons))
 
     if flip():
         title = f'{choice(spells["attributes"])} {title}'
 
-    if type == 'cure':
+    if spell == 'cure':
         title += ' for '
     else:
         title += ' of '
 
-    if type == 'summoning':
+    if spell == 'summoning':
         title += target
-    elif type in ('blight', 'cure'):
+    elif spell in ('blight', 'cure'):
         title += f'{choice(spells["maladies"])} {afflicted}'
     else:
         title += choice(spells['subjects'])
@@ -214,7 +222,6 @@ def generate_page(authors):
     # Generate list of ingredients
     items = []
     ingredients = ''
-    directions = ''
 
     for _ in range(randint(3, 10)):
         # This is horrifyingly inefficient
@@ -246,7 +253,7 @@ def generate_page(authors):
 
             current = f'{part[0]} of {item["name"]}' if part else item['name']
 
-            items.append({'ingredient': current, 'type': type})
+            items.append({'item': current, 'type': type})
 
             current = ' '.join((
                 str(count),
@@ -268,7 +275,7 @@ def generate_page(authors):
             if pluralize:
                 current = plural(current)
 
-            items.append({'ingredient': current, 'type': type})
+            items.append({'item': current, 'type': type})
 
             if maybe(0.25):
                 current = f'{choice(attributes)} {current}'
@@ -276,31 +283,102 @@ def generate_page(authors):
             if count:
                 current = f'{count} {current}'
 
-        ingredients += f'* {current}\n'
+        ingredients += f'\n* {current}'
 
-    liquid = any(i['type'] == 'liquid' for i in items)
+    liquid = [i['item'] for i in items if i['type'] == 'liquid']
+    solid = [i['item'] for i in items if i['type'] == 'solid']
+    other = [i['item'] for i in items if i['type'] not in ('solid', 'liquid')]
 
     # Generate directions
-    directions = initial(type, liquid)
+    directions = initial(type, liquid) + '\n\n'
 
-    for i in items:
-        directions += 'DO SOMETHING'
-        # If contains liquid, "pour in... stirring constantly/occasionally"
+    if liquid and solid and flip():
+        # Group liquids and solids, then add anything else
+        directions += choice([
+            f'Combine {oxford(liquid)}.',
+            f'Add {oxford(liquid)}, stirring gently.',
+            f'Beat together {oxford(liquid)} until frothy.',
+            f'Pour {oxford(liquid)} into prepared vessel.',
+        ])
 
-    # TODO Make sure everything in the YAMLs is used (e.g., list of limbs)
+        if maybe(1 / 3):
+            directions += 'Bring to a boil, stirring ' + choice([
+                'vigorously.', 'continuously.', 'occasionally.',
+                'intermittently.', 'once.'
+            ])
+        elif flip():
+            directions += (
+                ' Lower the temperature until the mixture begins to congeal.'
+            )
 
-    # TODO: Add cautions
+        directions += '\n\n' + choice([
+            f'Stir in {oxford(solid)}, individually.',
+            f'Blend in {oxford(solid)}, stirring until fully dissolved.',
+            f'Add {oxford(solid)}.' + (' Do not overmix.' if flip() else ''),
+            f'Beat in {oxford(solid)} until only a few chunks remain.',
+        ])
+
+        for i in other:
+            directions += ' ' if maybe(0.8) else '\n\n'
+            directions += choice([
+                f'Add {i}.',
+                f'Carefully add {i}.',
+                f'Cautiously add {i}.',
+                f'Blend in {i}.',
+                f'Fold in {i}.',
+                f'Combine with {i}.',
+                f'Add {i} and mix thoroughly.',
+            ])
+
+    else:
+        # Add each ingredient individually
+        directions += choice([
+            f'Start with {items[0]["item"]}.',
+            f'To begin, add {items[0]["item"]}.',
+            f'First, add {items[0]["item"]}.',
+            f'Add {items[0]["item"]} to the prepared vessel.',
+        ])
+
+        for i in items[1:]:
+            directions += ' ' if maybe(0.8) else '\n\n'
+
+            if i['type'] == 'liquid':
+                directions += choice([
+                    f'Add {i["item"]}.',
+                    f'Pour in {i["item"]}.',
+                    f'Mix in {i["item"]}.',
+                ]) + (
+                    f'Stir {choice(["vigorously", "gently", "once"])}.'
+                if flip() else '')
+
+            elif i['type'] == 'solid':
+                directions += choice([
+                    f'Add {i["item"]}.',
+                    f'Mix in {i["item"]}.',
+                    f'Fold in {i["item"]}.',
+                ])
+
+            else:
+                directions += choice([
+                    f'Add {i["item"]}.',
+                    f'Carefully add {i["item"]}.',
+                    f'Cautiously add {i["item"]}.',
+                    f'Blend in {i["item"]}.',
+                    f'Fold in {i["item"]}.',
+                    f'Combine with {i["item"]}.',
+                    f'Add {i["item"]} and mix thoroughly.',
+                ])
 
     if flip():
-        directions += '\n\n' + final(type, afflicted, liquid, authors, target)
+        directions += '\n\n' + final(spell, afflicted, liquid, authors, target)
 
-    spell = '\n\n'.join((
+    page = '\n\n'.join((
         f'## {title}',
-        f'### Ingredients\n\n{ingredients}',
+        f'### Ingredients\n{ingredients}',
         f'### Directions\n\n{directions}',
     ))
 
-    return spell
+    return page
 
 
 def initial(type, liquid):
@@ -313,12 +391,12 @@ def initial(type, liquid):
         choice(['rowen.', 'ash and yew.'])
         if liquid else None,
 
-        'Place a ' + choice('copper', 'brass', 'gold', 'silver', 'iron') +
-        'boiler over a brazier and etch with runes while it heats.'
+        'Place a ' + choice(['copper', 'brass', 'gold', 'silver', 'iron']) +
+        ' boiler over a brazier and etch with runes while it heats.'
         if liquid else None,
 
         'Array components on a ' + choice(['linen ', 'wool ', 'tartan ']) +
-        'sheet according to gestalt principles.',
+        'sheet according to gestalt principles.'
         if not liquid else None,
 
         'Ready a vessel composed of a ' + choice(['non-', '']) +
@@ -334,7 +412,7 @@ def initial(type, liquid):
     if flip():
         options = [
             'On a ' + choice(['misty', 'cloudy', 'rainy', 'dry', 'humid']) +
-            + choice([' morning', ' day', ' afternoon', ' evening', ' night']),
+            choice([' morning', ' day', ' afternoon', ' evening', ' night']),
 
             'Facing ' + choice(['north', 'south', 'east', 'west']),
 
@@ -350,7 +428,7 @@ def initial(type, liquid):
                 'Capricorn', 'Gemini', 'Pisces', 'Virgo', 'Cancer', 'Leo',
                 'Aquarius', 'Taurus', 'Libra', 'Scorpius', 'Aries',
                 'Sagittarius', 'Ophiuchus', 'Cassiopeia', 'Orion'
-            ])
+            ]),
 
             'After aligning yourself ' + choice(['parallel', 'perpendicular'])
             + ' to the ' + choice(['governing', 'major', 'minor']) + ' leyline'
@@ -382,7 +460,7 @@ def final(type, afflicted, liquid, authors, target):
         'Move one forefinger through the mixture, making the approved sigils '
         'and signs, then discard.',
 
-        "Chant your preferred invocations over the compound ({author[1]'s " + 
+        "Chant your preferred invocations over the compound ({authors[1]'s " + 
         ('Poem of Power' if flip() else 'Song of Sanctity') +
         ' recommended), then reserve for future use.',
 
@@ -419,8 +497,8 @@ def final(type, afflicted, liquid, authors, target):
         'Sprinkle a loose handful of the compound over the subject' +
         (f"'s {afflicted}," if type in ('cure', 'curse') else ',') +
         (
-            'mouthing the standard invocations.' if flip() else
-            'forming the standard signs with the left hand.'
+            ' mouthing the standard invocations.' if flip() else
+            ' forming the standard signs with the left hand.'
         ) if type not in ('general', 'summoning') else None,
 
         f'Ensure that the subject ingests the compound within {srange()} '
@@ -430,12 +508,12 @@ def final(type, afflicted, liquid, authors, target):
         'Apply directly to the forehead.'
         if type not in ('general', 'summoning') else None,
 
-        f"Following {author[3]}'s three maxims, create a wax simulacrum of the"
+        f"Following {authors[3]}'s three maxims, create a wax simulacrum of the"
         ' target. Submerge in the brew, and boil until all liquid has '
         'evaporated.'
         if type in ('curse', 'blight') and liquid else None,
 
-        f"Following {author[4]}'s four precepts, create a cloth manikin of the"
+        f"Following {authors[4]}'s four precepts, create a cloth manikin of the"
         ' target. Coat liberally with the compound, then burn. Scatter the '
         'ashes.'
         if type in ('curse', 'blight') else None,
