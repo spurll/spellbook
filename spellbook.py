@@ -24,8 +24,7 @@ LOCALES = 'locales.yml'
 ACTIONS = 'actions.yml'
 COMPONENTS = 'components.yml'
 
-#TARGET = 50000
-TARGET = 500
+TARGET = 50000
 
 basedir = path.abspath(path.dirname(__file__))
 
@@ -56,10 +55,16 @@ plurals = [False] * 4 + [True] * 7
 
 
 # TODO Add gestures, gesticulations, etc. in between ingredients
+# For each ingredient, there is a 10% chance of prefacing it with "While [doing this action]..."
+# There is a 20% chance of ending with a final action (snapping fingers, dancing on toes)
+# There is a 10% chance of ending with a caution (do not attempt if/unless...)
+# List of actions to take (while standing on/flexing one/two/three [foot/feet/leg/legs/hand/hands/arm/arms/tentacle/tentacles/pseudopod/pseudopodia/proboscis/proboscides)
 
 # TODO Move directions and ingredients into their own functions and refactor
 
 # TODO Make sure everything in the YAMLs is used (e.g., list of limbs)
+
+# TODO Update readme with links to example runs
 
 
 def generate(outfile):
