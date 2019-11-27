@@ -1,19 +1,27 @@
 ---
-general:
-  - staggering to and fro
-  - gyrating
-  - chanting
-  - leaping
-  - humming softly
-  - mumbling
-  - moaning gently
-limb:
-  - standing on
-  - hopping on
-  - dancing on
-  - flexing
-  - rotating
-  - stamping
-  - rubbing
-  - tapping
-
+actions:
+  general:
+    - staggering to and fro
+    - gyrating
+    - chanting
+    - leaping
+    - humming softly
+    - mumbling
+    - moaning gently
+  limb:
+    - standing on
+    - hopping on
+    - dancing on
+    - flexing
+    - rotating
+    - stamping
+    - rubbing
+    - tapping
+limbs:
+  - foot
+  - hand
+  - leg
+  - arm
+  - tentacle
+  - pseudopodium
+  - proboscis

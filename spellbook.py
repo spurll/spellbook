@@ -54,15 +54,7 @@ counts = ['¼', '½', '¾'] + list(range(1, 9))
 plurals = [False] * 4 + [True] * 7
 
 
-# TODO Add gestures, gesticulations, etc. in between ingredients
-# For each ingredient, there is a 10% chance of prefacing it with "While [doing this action]..."
-# There is a 20% chance of ending with a final action (snapping fingers, dancing on toes)
-# There is a 10% chance of ending with a caution (do not attempt if/unless...)
-# List of actions to take (while standing on/flexing one/two/three [foot/feet/leg/legs/hand/hands/arm/arms/tentacle/tentacles/pseudopod/pseudopodia/proboscis/proboscides)
-
 # TODO Move directions and ingredients into their own functions and refactor
-
-# TODO Make sure everything in the YAMLs is used (e.g., list of limbs)
 
 # TODO Update readme with links to example runs
 
@@ -306,8 +298,8 @@ def generate_page(authors):
             f'Pour {oxford(liquid)} into prepared vessel.',
         ])
 
-        if maybe(1 / 3):
-            directions += 'Bring to a boil, stirring ' + choice([
+        if maybe(0.33):
+            directions += ' Bring to a boil, stirring ' + choice([
                 'vigorously.', 'continuously.', 'occasionally.',
                 'intermittently.', 'once.'
             ])
@@ -316,24 +308,29 @@ def generate_page(authors):
                 ' Lower the temperature until the mixture begins to congeal.'
             )
 
-        directions += '\n\n' + choice([
+        next_direction = choice([
             f'Stir in {oxford(solid)}, individually.',
             f'Blend in {oxford(solid)}, stirring until fully dissolved.',
             f'Add {oxford(solid)}.' + (' Do not overmix.' if flip() else ''),
             f'Beat in {oxford(solid)} until only a few chunks remain.',
         ])
 
-        for i in other:
-            directions += ' ' if maybe(0.8) else '\n\n'
-            directions += choice([
-                f'Add {i}.',
-                f'Carefully add {i}.',
-                f'Cautiously add {i}.',
-                f'Blend in {i}.',
-                f'Fold in {i}.',
-                f'Combine with {i}.',
-                f'Add {i} and mix thoroughly.',
+        directions += '\n\n' + optional_action(next_direction)
+
+        if other:
+            next_direction = ' '.join([
+                choice([
+                    f'Add {i}.',
+                    f'Carefully add {i}.',
+                    f'Cautiously add {i}.',
+                    f'Blend in {i}.',
+                    f'Fold in {i}.',
+                    f'Combine with {i}.',
+                    f'Add {i} and mix thoroughly.',
+                ]) for i in other
             ])
+
+            directions += '\n\n' + optional_action(next_direction)
 
     else:
         # Add each ingredient individually
@@ -345,26 +342,24 @@ def generate_page(authors):
         ])
 
         for i in items[1:]:
-            directions += ' ' if maybe(0.8) else '\n\n'
-
             if i['type'] == 'liquid':
-                directions += choice([
+                next_direction = choice([
                     f'Add {i["item"]}.',
                     f'Pour in {i["item"]}.',
                     f'Mix in {i["item"]}.',
                 ]) + (
-                    f'Stir {choice(["vigorously", "gently", "once"])}.'
+                    f' Stir {choice(["vigorously", "gently", "once"])}.'
                 if flip() else '')
 
             elif i['type'] == 'solid':
-                directions += choice([
+                next_direction = choice([
                     f'Add {i["item"]}.',
                     f'Mix in {i["item"]}.',
                     f'Fold in {i["item"]}.',
                 ])
 
             else:
-                directions += choice([
+                next_direction = choice([
                     f'Add {i["item"]}.',
                     f'Carefully add {i["item"]}.',
                     f'Cautiously add {i["item"]}.',
@@ -373,6 +368,9 @@ def generate_page(authors):
                     f'Combine with {i["item"]}.',
                     f'Add {i["item"]} and mix thoroughly.',
                 ])
+
+            directions += '\n\n' if maybe(0.2) else ' '
+            directions += optional_action(next_direction, 0.2)
 
     if flip():
         directions += '\n\n' + final(spell, afflicted, liquid, authors, target)
@@ -384,6 +382,43 @@ def generate_page(authors):
     ))
 
     return page
+
+
+def optional_action(direction, chance=0.5):
+    return action() + uncapitalize(direction) if maybe(chance) else direction
+
+
+def action():
+    limb = choice(actions['limbs'])
+    limbs = choice([
+        f'one {limb}',
+        f'two {plural(limb)}',
+        f'three {plural(limb)}',
+    ])
+
+    options = [f'While {a}, ' for a in actions['actions']['general']]
+
+    options += [f'While {a} {limbs}, ' for a in actions['actions']['limb']]
+
+    # Add additional actions that too complicated to put in the YAML file
+    # without causing a headache
+    options += [
+        f'Raise {limbs} and gesticulate wildly, then ',
+
+        f'While waving {indefinite(limb)} slowly over the mixture, ',
+
+        f'Snap your fingers {choice(["once", "twice", "thrice"])}, then ',
+
+        f'Gesture vaguely to the {choice(["north", "south", "east", "west"])},'
+        ' then ',
+
+        f'While working your fingers in a {"counter" if flip() else ""}'
+        'clockwise spiral, ',
+
+        f'Wriggle your {choice(["fingers", "toes"])}, then ',
+    ]
+
+    return choice(options)
 
 
 def initial(type, liquid):
@@ -465,8 +500,8 @@ def final(type, afflicted, liquid, authors, target):
         'Move one forefinger through the mixture, making the approved sigils '
         'and signs, then discard.',
 
-        "Chant your preferred invocations over the compound ({authors[1]'s " + 
-        ('Poem of Power' if flip() else 'Song of Sanctity') +
+        f"Chant your preferred invocations over the compound ({authors[1]}'s" + 
+        (' Poem of Power' if flip() else ' Song of Sanctity') +
         ' recommended), then reserve for future use.',
 
         'The mixture should be shaken, then imbibed while making the '
@@ -507,7 +542,7 @@ def final(type, afflicted, liquid, authors, target):
         ) if type not in ('general', 'summoning') else None,
 
         f'Ensure that the subject ingests the compound within {srange()} '
-        'hours, to ensure maximum effectiveness.'
+        'hours for maximum effectiveness.'
         if type not in ('general', 'summoning') else None,
 
         'Apply directly to the forehead.'
