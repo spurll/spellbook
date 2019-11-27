@@ -23,6 +23,7 @@ FIGURES = 'figures.yml'
 LOCALES = 'locales.yml'
 ACTIONS = 'actions.yml'
 COMPONENTS = 'components.yml'
+MATERIALS = 'materials.yml'
 
 TARGET = 50000
 
@@ -42,8 +43,12 @@ figures = load_yaml(path.join(basedir, FIGURES))
 locales = load_yaml(path.join(basedir, LOCALES))
 actions = load_yaml(path.join(basedir, ACTIONS))
 components = load_yaml(path.join(basedir, COMPONENTS))
+materials = load_yaml(path.join(basedir, MATERIALS))
 
-parts = [p for p in components['parts']['animal']]
+parts = [
+    k for k, v in components['parts']['animal'].items()
+    if v != 'intangible'
+]
 
 summons = [
     k for k, v in components['ingredients'].items()
@@ -53,8 +58,6 @@ summons = [
 counts = ['¼', '½', '¾'] + list(range(1, 9))
 plurals = [False] * 4 + [True] * 7
 
-
-# TODO Move directions and ingredients into their own functions and refactor
 
 # TODO Update readme with links to example runs
 
@@ -124,7 +127,7 @@ def generate_frame():
     prologue = ' '.join((
         indefinite(attribute).capitalize(),
         figure,
-        'stole into',
+        choice(['crept into', 'strode into', 'stole into', 'entered']),
         indefinite(choice(locales['attributes'])),
         f'{locale}, '
     ))
@@ -217,163 +220,11 @@ def generate_page(authors):
     title = titlecase(title)
 
     # Generate list of ingredients
-    items = []
-    ingredients = ''
-
-    for _ in range(randint(3, 10)):
-        # This is horrifyingly inefficient
-        item = choice(list(components['ingredients'].items()))
-        item[1]['name'] = item[0]
-        item = item[1]
-
-        part = (
-            choice(list(components['parts'][item['type']].items()))
-            if item['parts'] else None
-        )
-
-        # Item types: animal, plant, fungus, solid, liquid, intangible
-        # Part types: solid, liquid, intangible
-        type = part[1] if part else item['type']
-
-        attributes = components['attributes']['general']
-
-        if type != 'intangible':
-            count, pluralize = choice(list(zip(counts, plurals)))
-        else:
-            count, pluralize = None, False
-
-        if type in ('solid', 'liquid'):
-            # Note no +=! For lists, += modifies the original list!
-            attributes = attributes + components['attributes'][type]
-            attribute = choice(attributes) if maybe(0.25) else None
-            measure = choice(components['measures'][type])
-
-            current = f'{part[0]} of {item["name"]}' if part else item['name']
-
-            items.append({'item': current, 'type': type})
-
-            current = ' '.join((
-                str(count),
-                plural(measure) if pluralize else measure,
-                f'{attribute} {current}' if attribute else current,
-            ))
-
-            if maybe(0.2):
-                current += f', {choice(components["preparations"][type])}'
-
-        else:
-            current = item['name']
-
-            if part:
-                current = f'{part[0]} of {current}'
-            elif type == 'animal' and flip():
-                current = f'live {current}'
-
-            if pluralize:
-                current = plural(current)
-
-            items.append({'item': current, 'type': type})
-
-            if maybe(0.25):
-                current = f'{choice(attributes)} {current}'
-
-            if count:
-                current = f'{count} {current}'
-
-        ingredients += f'\n* {current}'
-
-    liquid = [i['item'] for i in items if i['type'] == 'liquid']
-    solid = [i['item'] for i in items if i['type'] == 'solid']
-    other = [i['item'] for i in items if i['type'] not in ('solid', 'liquid')]
+    items, ingredients = generate_ingredients()
+    ingredients = f'\n* ' + '\n* '.join(ingredients)
 
     # Generate directions
-    directions = initial(type, liquid) + '\n\n'
-
-    if liquid and solid and flip():
-        # Group liquids and solids, then add anything else
-        directions += choice([
-            f'Combine {oxford(liquid)}.',
-            f'Add {oxford(liquid)}, stirring gently.',
-            f'Beat together {oxford(liquid)} until frothy.',
-            f'Pour {oxford(liquid)} into prepared vessel.',
-        ])
-
-        if maybe(0.33):
-            directions += ' Bring to a boil, stirring ' + choice([
-                'vigorously.', 'continuously.', 'occasionally.',
-                'intermittently.', 'once.'
-            ])
-        elif flip():
-            directions += (
-                ' Lower the temperature until the mixture begins to congeal.'
-            )
-
-        next_direction = choice([
-            f'Stir in {oxford(solid)}, individually.',
-            f'Blend in {oxford(solid)}, stirring until fully dissolved.',
-            f'Add {oxford(solid)}.' + (' Do not overmix.' if flip() else ''),
-            f'Beat in {oxford(solid)} until only a few chunks remain.',
-        ])
-
-        directions += '\n\n' + optional_action(next_direction)
-
-        if other:
-            next_direction = ' '.join([
-                choice([
-                    f'Add {i}.',
-                    f'Carefully add {i}.',
-                    f'Cautiously add {i}.',
-                    f'Blend in {i}.',
-                    f'Fold in {i}.',
-                    f'Combine with {i}.',
-                    f'Add {i} and mix thoroughly.',
-                ]) for i in other
-            ])
-
-            directions += '\n\n' + optional_action(next_direction)
-
-    else:
-        # Add each ingredient individually
-        directions += choice([
-            f'Start with {items[0]["item"]}.',
-            f'To begin, add {items[0]["item"]}.',
-            f'First, add {items[0]["item"]}.',
-            f'Add {items[0]["item"]} to the prepared vessel.',
-        ])
-
-        for i in items[1:]:
-            if i['type'] == 'liquid':
-                next_direction = choice([
-                    f'Add {i["item"]}.',
-                    f'Pour in {i["item"]}.',
-                    f'Mix in {i["item"]}.',
-                ]) + (
-                    f' Stir {choice(["vigorously", "gently", "once"])}.'
-                if flip() else '')
-
-            elif i['type'] == 'solid':
-                next_direction = choice([
-                    f'Add {i["item"]}.',
-                    f'Mix in {i["item"]}.',
-                    f'Fold in {i["item"]}.',
-                ])
-
-            else:
-                next_direction = choice([
-                    f'Add {i["item"]}.',
-                    f'Carefully add {i["item"]}.',
-                    f'Cautiously add {i["item"]}.',
-                    f'Blend in {i["item"]}.',
-                    f'Fold in {i["item"]}.',
-                    f'Combine with {i["item"]}.',
-                    f'Add {i["item"]} and mix thoroughly.',
-                ])
-
-            directions += '\n\n' if maybe(0.2) else ' '
-            directions += optional_action(next_direction, 0.2)
-
-    if flip():
-        directions += '\n\n' + final(spell, afflicted, liquid, authors, target)
+    directions = generate_directions(items, spell, afflicted, authors, target)
 
     page = '\n\n'.join((
         f'## {title}',
@@ -382,6 +233,187 @@ def generate_page(authors):
     ))
 
     return page
+
+
+def generate_ingredients():
+    items, ingredients = [], []
+
+    for _ in range(randint(3, 10)):
+        item, ingredient = pick_ingredient()
+        items.append(item)
+        ingredients.append(ingredient)
+
+    return items, ingredients
+
+
+def pick_ingredient():
+    # This is horrifyingly inefficient
+    item = choice(list(components['ingredients'].items()))
+    item[1]['name'] = item[0]
+    item = item[1]
+
+    part = (
+        choice(list(components['parts'][item['type']].items()))
+        if item['parts'] else None
+    )
+
+    # Item types: animal, plant, fungus, solid, liquid, intangible
+    # Part types: solid, liquid, intangible
+    type = part[1] if part else item['type']
+
+    attributes = components['attributes']['general']
+
+    if type != 'intangible':
+        count, pluralize = choice(list(zip(counts, plurals)))
+    else:
+        count, pluralize = None, False
+
+    if type in ('solid', 'liquid'):
+        # Note no +=! For lists, += modifies the original list!
+        attributes = attributes + components['attributes'][type]
+        attribute = choice(attributes) if maybe(0.25) else None
+        measure = choice(components['measures'][type])
+
+        ingredient = f'{part[0]} of {item["name"]}' if part else item['name']
+
+        item = {'item': ingredient, 'type': type}
+
+        ingredient = ' '.join((
+            str(count),
+            plural(measure) if pluralize else measure,
+            f'{attribute} {ingredient}' if attribute else ingredient,
+        ))
+
+        if maybe(0.2):
+            ingredient += f', {choice(components["preparations"][type])}'
+
+    else:
+        ingredient = item['name']
+
+        if part:
+            ingredient = f'{part[0]} of {ingredient}'
+        elif type == 'animal' and flip():
+            ingredient = f'live {ingredient}'
+
+        if pluralize:
+            ingredient = plural(ingredient)
+
+        item = {'item': ingredient, 'type': type}
+
+        if maybe(0.25):
+            ingredient = f'{choice(attributes)} {ingredient}'
+
+        if count:
+            ingredient = f'{count} {ingredient}'
+
+    return item, ingredient
+
+
+def generate_directions(items, spell, afflicted, authors, target):
+    liquid = [i['item'] for i in items if i['type'] == 'liquid']
+    solid = [i['item'] for i in items if i['type'] == 'solid']
+    other = [i['item'] for i in items if i['type'] not in ('solid', 'liquid')]
+
+    directions = initial(type, liquid) + '\n\n'
+
+    if liquid and solid and flip():
+        # Group liquids and solids, then add anything else
+        directions += grouped_directions(liquid, solid, other)
+    else:
+        # Add each ingredient individually
+        directions += individual_directions(items)
+
+    if flip():
+        directions += '\n\n' + final(spell, afflicted, liquid, authors, target)
+
+    return directions
+
+
+def grouped_directions(liquid, solid, other):
+    directions = choice([
+        f'Combine {oxford(liquid)}.',
+        f'Add {oxford(liquid)}, stirring gently.',
+        f'Beat together {oxford(liquid)} until frothy.',
+        f'Pour {oxford(liquid)} into prepared vessel.',
+    ])
+
+    if maybe(0.33):
+        directions += ' Bring to a boil, stirring ' + choice([
+            'vigorously.', 'continuously.', 'occasionally.',
+            'intermittently.', 'once.'
+        ])
+    elif flip():
+        directions += (
+            ' Lower the temperature until the mixture begins to congeal.'
+        )
+
+    next_direction = choice([
+        f'Stir in {oxford(solid)}, individually.',
+        f'Blend in {oxford(solid)}, stirring until fully dissolved.',
+        f'Add {oxford(solid)}.' + (' Do not overmix.' if flip() else ''),
+        f'Beat in {oxford(solid)} until only a few chunks remain.',
+    ])
+
+    directions += '\n\n' + optional_action(next_direction)
+
+    if other:
+        next_direction = ' '.join([
+            choice([
+                f'Add {i}.',
+                f'Carefully add {i}.',
+                f'Cautiously add {i}.',
+                f'Blend in {i}.',
+                f'Fold in {i}.',
+                f'Combine with {i}.',
+                f'Add {i} and mix thoroughly.',
+            ]) for i in other
+        ])
+
+        directions += '\n\n' + optional_action(next_direction)
+
+    return directions
+
+
+def individual_directions(items):
+    directions = choice([
+        f'Start with {items[0]["item"]}.',
+        f'To begin, add {items[0]["item"]}.',
+        f'First, add {items[0]["item"]}.',
+        f'Add {items[0]["item"]} to the prepared vessel.',
+    ])
+
+    for i in items[1:]:
+        if i['type'] == 'liquid':
+            next_direction = choice([
+                f'Add {i["item"]}.',
+                f'Pour in {i["item"]}.',
+                f'Mix in {i["item"]}.',
+            ]) + (
+                f' Stir {choice(["vigorously", "gently", "once"])}.'
+            if flip() else '')
+
+        elif i['type'] == 'solid':
+            next_direction = choice([
+                f'Add {i["item"]}.',
+                f'Mix in {i["item"]}.',
+                f'Fold in {i["item"]}.',
+            ])
+
+        else:
+            next_direction = choice([
+                f'Add {i["item"]}.',
+                f'Carefully add {i["item"]}.',
+                f'Cautiously add {i["item"]}.',
+                f'Blend in {i["item"]}.',
+                f'Fold in {i["item"]}.',
+                f'Combine with {i["item"]}.',
+                f'Add {i["item"]} and mix thoroughly.',
+            ])
+
+        directions += '\n\n' if maybe(0.2) else ' '
+        directions += optional_action(next_direction, 0.2)
+
+    return directions
 
 
 def optional_action(direction, chance=0.5):
@@ -422,29 +454,52 @@ def action():
 
 
 def initial(type, liquid):
+    stone = choice(materials['stone'])
+    metal = choice(materials['metal'])
+    fabric = choice(materials['fabric'])
+    hard = choice(materials['hardwood'])
+    soft = choice(materials['softwood'])
+    
+    if flip():
+        wood, backup = hard, choice_without(materials['hardwood'], hard)
+    else:
+        wood, backup = soft, choice_without(materials['softwood'], soft)
+
     options = [
-        'Prepare a ' + choice(['broad ', 'shallow ']) +
-        choice(['stone mortar and pestle.', 'hardwood mortar and pestle '
-            '(acacia preferred, though oak will do).']),
+        'Prepare a ' + choice(['broad ', 'narrow ', 'shallow ', 'deep ']) +
+        choice([
+            f'{stone} mortar and pestle.',
+            f'{metal} mortar and pestle.',
+            f'{wood} mortar and pestle.',
+            f'wooden mortar and pestle ({wood} preferred, though {backup} will'
+            ' do).',
+        ]),
 
-        'Heat a cauldron over a well-banked fire of ' +
-        choice(['rowen.', 'ash and yew.'])
+        f'Heat a cauldron over a well-banked fire of {wood}' +
+        (f' and {backup}.' if flip() else '.')
         if liquid else None,
 
-        'Place a ' + choice(['copper', 'brass', 'gold', 'silver', 'iron']) +
-        ' boiler over a brazier and etch with runes while it heats.'
+        f'Place {indefinite(metal)} boiler over a brazier and etch with runes '
+        'while it heats.'
         if liquid else None,
 
-        'Array components on a ' + choice(['linen ', 'wool ', 'tartan ']) +
-        'sheet according to gestalt principles.'
+        'Array components on {indefinite(fabric)} sheet according to gestalt '
+        'principles.'
+        if not liquid else None,
+
+        f'Ready {indefinite(fabric)} sack for mixing.'
         if not liquid else None,
 
         'Ready a vessel composed of a ' + choice(['non-', '']) +
         'ferromagnetic metal (if unsure of its composition, test with a '
-        'lodestone).',
+        'lodestone).'
+        if flip() else None,
 
-        'Ready a ' + choice(['clay', 'stone', 'wooden', 'granite', 'quartz']) +
-        ' vessel and chill until frost is just visible.'
+        f'Ready {indefinite(choice([stone, metal, wood]))} vessel and ' +
+        choice([
+            'chill until frost is just visible.',
+            'heat until the bottom begins to scorch.',
+        ]),
     ]
 
     direction = choice([o for o in options if o])

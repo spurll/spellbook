@@ -1,0 +1,60 @@
+---
+stone:
+  - clay
+  - granite
+  - obsidian
+  - limestone
+  - marble
+  - onyx
+  - basalt
+  - quartz
+  - syenite
+  - pumice
+  - hornfels
+  - slate
+  - schist
+  - jasper
+metal:
+  - brass
+  - copper
+  - nickel
+  - iron
+  - steel
+  - gold
+  - silver
+  - platinum
+  - lead
+  - tin
+  - zinc
+fabric:
+  - wool
+  - linen
+  - slik
+  - canvas
+  - hempen
+  - flax
+  - jersey
+  - tartan
+  - paisley
+  - brocaded
+  - jacquard
+hardwood:
+  - alder
+  - ash
+  - rowan
+  - birch
+  - elm
+  - cherry
+  - maple
+  - oak
+  - acacia
+  - hickory
+softwood:
+  - fir
+  - pine
+  - spruce
+  - larch
+  - cedar
+  - hemlock
+  - yew
+
