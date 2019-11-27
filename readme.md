@@ -12,4 +12,9 @@ optionally passing an output filename (defaults to `spellbook.md`).
 
 ## Examples
 
-TODO: Link to examples here
+[Brish's Omnibus of Blasphemies](examples/omnibus.md)
+
+[Scholarly Record of Forbidden Charms and Cures](examples/record.md)
+
+[Muriyell's Helpful Research into Conjurings and Obscenities](examples/research.md)
+

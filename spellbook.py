@@ -59,9 +59,6 @@ counts = ['¼', '½', '¾'] + list(range(1, 9))
 plurals = [False] * 4 + [True] * 7
 
 
-# TODO Update readme with links to example runs
-
-
 def generate(outfile):
     authors = [name() for _ in range(7)]
     author = authors[0]
