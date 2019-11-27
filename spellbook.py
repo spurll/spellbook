@@ -10,10 +10,8 @@ from os import path
 from random import choice, randint
 
 from maybe import flip, maybe, choice_without
-from words import (
-    name, capitalize, uncapitalize, titlecase, oxford, wordcount, indefinite,
-    plural
-)
+from words import name, capitalize, uncapitalize, titlecase, oxford, wordcount
+from words import indefinite, plural
 
 
 CONFIG = 'config.yml'
@@ -27,7 +25,7 @@ MATERIALS = 'materials.yml'
 
 TARGET = 50000
 
-basedir = path.abspath(path.dirname(__file__))
+resources = path.join(path.abspath(path.dirname(__file__)), 'resources')
 
 
 def load_yaml(file):
@@ -36,14 +34,14 @@ def load_yaml(file):
 
 
 # Load configuration and dictionaries
-config = load_yaml(path.join(basedir, CONFIG))
-books = load_yaml(path.join(basedir, BOOKS))
-spells = load_yaml(path.join(basedir, SPELLS))
-figures = load_yaml(path.join(basedir, FIGURES))
-locales = load_yaml(path.join(basedir, LOCALES))
-actions = load_yaml(path.join(basedir, ACTIONS))
-components = load_yaml(path.join(basedir, COMPONENTS))
-materials = load_yaml(path.join(basedir, MATERIALS))
+config = load_yaml(path.join(resources, CONFIG))
+books = load_yaml(path.join(resources, BOOKS))
+spells = load_yaml(path.join(resources, SPELLS))
+figures = load_yaml(path.join(resources, FIGURES))
+locales = load_yaml(path.join(resources, LOCALES))
+actions = load_yaml(path.join(resources, ACTIONS))
+components = load_yaml(path.join(resources, COMPONENTS))
+materials = load_yaml(path.join(resources, MATERIALS))
 
 parts = [
     k for k, v in components['parts']['animal'].items()
