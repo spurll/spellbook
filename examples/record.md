@@ -138,7 +138,7 @@ Add neon. Stir vigorously. Mix in brine. While moaning gently, add corruption an
 * 3 kennings leaf of daisy
 * 6 drams lithium
 * conscience of leprechaun
-* 6 scruples prisine root of mandrake
+* 6 scruples pristine root of mandrake
 
 ### Directions
 
@@ -1336,7 +1336,7 @@ The mixture should be shaken, then imbibed while making the appropriate runic ge
 * 8 grains white bud of moly
 * 4 termites
 * 6 pounds pelvis of rhinoceros
-* 3 drams prisine serum of gryphon, tepid
+* 3 drams pristine serum of gryphon, tepid
 * 5 drams ear of fowl, cubed
 
 ### Directions
@@ -1357,7 +1357,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 
 ### Ingredients
 
-* prisine essence of Nimloth
+* pristine essence of Nimloth
 * consciousness of chameleon
 * young mist
 * 3 ounces twig of athelas
@@ -1440,7 +1440,7 @@ While tapping one foot, blend in live yellowjackets. Fold in luck. Carefully add
 * ¾ ounce ulna of selkie
 * 6 pinches blessed rib of bat
 * ¾ thimble grim lymph of lynx, stirred
-* prisine sorrow
+* pristine sorrow
 
 ### Directions
 
@@ -1837,7 +1837,7 @@ Chant your preferred invocations over the compound (Jusiyev's Poem of Power reco
 * scent of bovine
 * touch of salamander
 * hot hope of monotreme
-* 8 pecks prisine stamen of creosote
+* 8 pecks pristine stamen of creosote
 * 1 pint æther
 * 5 ounces grim calcium
 * young mind of parrot
@@ -1911,7 +1911,7 @@ First, add bud of creosote. Pour in dew of triffid. While rubbing two hands, mix
 * shadow of poplar
 * ¼ live mite
 * 1 ounce eye of bat, dessicated
-* 5 lots prisine silicon
+* 5 lots pristine silicon
 * 2 ounces rot
 
 ### Directions
@@ -2178,7 +2178,7 @@ Take a handful and scatter it in a loose circle. 3 to 7 ghouls should begin to a
 
 * ¼ ounce branch of poplar
 * ¾ grain red heel of sloth
-* prisine touch of kudzu
+* pristine touch of kudzu
 
 ### Directions
 
@@ -2266,7 +2266,7 @@ Combine with memory of daisy. Add breath of hedgehog.
 * 3 ounces heart of lemur
 * 3 lots furrowed fruit of triffid
 * 2 measures dew of mandrake
-* prisine mind of sloth
+* pristine mind of sloth
 * 5 pecks stamen of moly
 
 ### Directions
@@ -2342,7 +2342,7 @@ Carefully add moth. Add spark of monkey. Carefully add science. Add live cockle 
 * shadow of rhipidistian
 * 6 enoki
 * touch of poplar
-* 2 measures prisine stem of pine
+* 2 measures pristine stem of pine
 * black mist
 * ¾ cursed live moth
 
@@ -2370,8 +2370,8 @@ Chant your preferred invocations over the compound (Jusiyev's Song of Sanctity r
 * ¾ harvestman
 * 5 pinches grim root of loosestrife
 * despair
-* prisine idealism
-* 6 ounces prisine granite
+* pristine idealism
+* 6 ounces pristine granite
 
 ### Directions
 
@@ -2454,7 +2454,7 @@ Chant your preferred invocations over the compound (Jusiyev's Poem of Power reco
 * 4 kasks sap of pine
 * 4 pecks furrowed twig of fern
 * blessed sanctity
-* prisine joy
+* pristine joy
 
 ### Directions
 
@@ -2499,7 +2499,7 @@ Carefully add fear. Blend in grin of squirrel. Add essence of elm and mix thorou
 * 8 grains potassium
 * 1 pound zinc
 * 5 grains viscera of fox
-* prisine joy
+* pristine joy
 * ¼ dram humour of possum
 
 ### Directions
@@ -2727,7 +2727,7 @@ Take a single strand of the target's hair, break it in two, and add it to the co
 * 5 lots pure granite
 * 8 kennings char, cubed
 * 6 measures gizzard of otter
-* 4 prisine live millipedes
+* 4 pristine live millipedes
 * ¾ pinch black cranium of wyvern
 * 7 moths
 * 6 lots cockles of kelpie
@@ -2831,7 +2831,7 @@ Mix in stem of hibiscus.
 
 * ¼ ant
 * 2 kennings iron
-* prisine moongleam
+* pristine moongleam
 * ¾ tumbler tepid æther
 * 8 kennings gallbladder of owl
 * 2 worms
@@ -3403,7 +3403,7 @@ Chant your preferred invocations over the compound (Jusiyev's Poem of Power reco
 ### Ingredients
 
 * 8 ounces phloem of hungry grass
-* 2 quarts prisine blood of gibbon
+* 2 quarts pristine blood of gibbon
 * 7 measures cockles of newt
 * 2 kennings blessed silicon
 * 7 grains coal
@@ -3722,7 +3722,7 @@ Move one forefinger through the mixture, making the approved sigils and signs, t
 * secret
 * 1 minim mud, beaten
 * luck
-* 6 ounces prisine milk of monkey
+* 6 ounces pristine milk of monkey
 * 4 drams copper
 * touch of athelas
 * 2 young live centipedes
@@ -3998,7 +3998,7 @@ Paint face, arms, and chest with the compound. The spell will take hold within s
 
 * 5 mites
 * 4 drams patella of chimera
-* prisine scent of jasmine
+* pristine scent of jasmine
 * 7 quarts sap of rose
 * ¾ kenning viscera of elephant, washed
 * death
@@ -4051,7 +4051,7 @@ Fold in science.
 * 5 drams water, chilled
 * ¾ ounce gravel, chopped
 * violet shadow of umdhlebi
-* 2 kennings prisine silver, pickled
+* 2 kennings pristine silver, pickled
 * 2 fleas
 
 ### Directions
@@ -4228,7 +4228,7 @@ First, add live termite. Add flower of calluna. Carefully add live cockle.
 * 4 drams heart of caribou
 * ¼ measure stem of fern
 * 3 drams scored frost
-* 4 quarts prisine sebum of kelpie
+* 4 quarts pristine sebum of kelpie
 * 4 spoons æther
 * scream of swallow
 * 6 grains stamen of tipua
@@ -5008,7 +5008,7 @@ Fold in life. Add shadow of Yggdrasil and mix thoroughly.
 * violet essence of ivy
 * ¾ scruple sap of oak, diluted
 * ¾ kask sap of aspen
-* prisine breath of demon
+* pristine breath of demon
 * ¼ live butterfly
 * grim fear
 * 2 drams patella of ungulate, puréed
@@ -5125,7 +5125,7 @@ Bring to a rolling boil and have the subject inhale the vapours for 2 to 5 hours
 ### Ingredients
 
 * memory of rose
-* 5 measures prisine tin
+* 5 measures pristine tin
 * 8 kennings white seed of jasper
 
 ### Directions
@@ -5226,7 +5226,7 @@ Speak the seven forbidden words, then submerge one arm in the compound up to the
 
 * 8 scruples gizzard of monotreme
 * 6 tumblers alcohol
-* 6 pounds prisine tusk of swallow
+* 6 pounds pristine tusk of swallow
 * 1 ounce cursed scale of chimera
 * chilled memory of daisy
 * 3 lots spleen of monkey, ground
@@ -5291,7 +5291,7 @@ Mix in leaf of moly. While gyrating, cautiously add science. Cautiously add supe
 
 ### Ingredients
 
-* 7 drams prisine polonium
+* 7 drams pristine polonium
 * 8 pinches char
 * 7 spoons nitrogen
 * 5 grains heel of bovine
@@ -5814,9 +5814,9 @@ Take a pinch between thumb and forefinger and inhale deeply.
 * 2 pecks chipped branch of baobab
 * mist
 * ¼ minim alcohol, diluted
-* 1 prisine flea
+* 1 pristine flea
 * ½ pound zinc, pulverized
-* 3 grains prisine petal of rose
+* 3 grains pristine petal of rose
 
 ### Directions
 
@@ -5905,7 +5905,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 * 2 pure live harvestmen
 * 4 pinches scored stamen of rosemary
 * 6 kasks mud
-* 8 drams prisine fruit of titan arum
+* 8 drams pristine fruit of titan arum
 * ½ quart cool tear of troll
 * 3 drams lead, polished
 * 8 measures radius of toad
@@ -6022,7 +6022,7 @@ Cautiously add live termites. Fold in tungsten.
 
 ### Ingredients
 
-* 2 kennings prisine spine of wyvern
+* 2 kennings pristine spine of wyvern
 * grim death
 * scent of alligator
 * 8 pecks grim platinum
@@ -6456,7 +6456,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 * 7 scruples leaf of lily
 * 8 ounces red tin
 * ½ kenning furrowed radius of fowl
-* prisine suspicion of ghoul
+* pristine suspicion of ghoul
 * 6 solifuges
 
 ### Directions
@@ -6992,7 +6992,7 @@ Following Ej's four precepts, create a cloth manikin of the target. Coat liberal
 * 4 scruples nose of yeti
 * 6 drams ancient saliva of shrew
 * 8 pinches tusk of caribou
-* 4 measures prisine magnesium
+* 4 measures pristine magnesium
 
 ### Directions
 
@@ -7127,7 +7127,7 @@ Start with iridium. Add corruption and mix thoroughly. Mix in flower of tipua. W
 * 4 enoki
 * ¾ lot tin
 * 5 thimbles mud
-* prisine whisper of selkie
+* pristine whisper of selkie
 * hope
 * 1 grain cobalt
 * hope of baboon
@@ -7257,7 +7257,7 @@ While standing on one hand, fold in chanterelles. Cautiously add live solifuge. 
 * ¼ lot magnesium
 * 5 pinches tusk of chameleon
 * joy of albatross
-* 2 prisine live centipedes
+* 2 pristine live centipedes
 * 4 shiitakes
 * ¼ scruple boron
 
@@ -7738,7 +7738,7 @@ Apply directly to the forehead.
 * 2 worms
 * 4 ounces mandible of man, dessicated
 * 8 cool mantises
-* 1 dram prisine æther
+* 1 dram pristine æther
 * ¼ ounce coal
 
 ### Directions
@@ -7999,7 +7999,7 @@ Hum softly as you scatter the contents.
 ### Ingredients
 
 * ¼ grain gonad of leviathan, pickled
-* prisine life
+* pristine life
 * ½ lot tongue of okapi
 
 ### Directions
@@ -9135,7 +9135,7 @@ Chant your preferred invocations over the compound (Jusiyev's Poem of Power reco
 
 * 5 white millipedes
 * 8 quarts caloric
-* 8 measures prisine water
+* 8 measures pristine water
 * 1 dram black rot
 * 3 pecks twig of vegetable lamb, cubed
 * 5 pounds tail of caiman
@@ -10027,7 +10027,7 @@ Ensure that the subject ingests the compound within 3 to 9 hours for maximum eff
 ### Ingredients
 
 * 8 lots spine of heron
-* prisine memory of baobab
+* pristine memory of baobab
 * 5 measures cursed antimony
 * 5 kennings white nose of chameleon
 * 6 toadstools
@@ -10191,7 +10191,7 @@ Speak the seven forbidden words, then submerge one arm in the compound up to the
 * young joy
 * cursed whisper of otter
 * 2 pounds twig of treant, puréed
-* prisine memory of wombat
+* pristine memory of wombat
 * ¾ measure caloric
 * 4 drams liver of otter
 
@@ -10494,7 +10494,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 * 5 drams lithium
 * 2 lots chipped fruit of treant
 * despair
-* 7 ounces prisine frost, cubed
+* 7 ounces pristine frost, cubed
 * ½ peck heart of lemur
 * 5 scruples warm blood of rat, tepid
 * 8 quarts dew of cinnamon
@@ -10547,7 +10547,7 @@ Apply directly to the forehead.
 * 4 pecks pistil of baobab
 * sorrow
 * 6 lots char
-* prisine scream of anteater
+* pristine scream of anteater
 * 6 live moths
 * ¼ blessed enoki
 * 6 quarts water
@@ -10576,7 +10576,7 @@ Snap your fingers once, then combine with joy. Blend in sorrow. Blend in scream 
 * 7 pounds iron
 * 5 live worms
 * memory of athelas
-* prisine love of anteater
+* pristine love of anteater
 * sanctity
 * 1 measure white pelvis of otter
 
@@ -10833,7 +10833,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 
 ### Ingredients
 
-* 2 quarts prisine choler of hyrax, stirred
+* 2 quarts pristine choler of hyrax, stirred
 * 4 measures spine of sloth
 * ¼ spoon red alcohol, dehydrated
 * 5 measures bismuth
@@ -11180,7 +11180,7 @@ Blend in joy.
 
 ### Ingredients
 
-* prisine despair of monkey
+* pristine despair of monkey
 * 6 ounces spleen of troll
 * ½ grain silver
 * ½ ounce red ulna of tanuki
@@ -11515,7 +11515,7 @@ Chant your preferred invocations over the compound (Jusiyev's Poem of Power reco
 ### Ingredients
 
 * 4 pinches cockles of alligator
-* 6 drams prisine polonium
+* 6 drams pristine polonium
 * 4 pinches cursed tallow, puréed
 * ¾ grain iridium
 
@@ -11849,7 +11849,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 * joy of okapi
 * ¼ scruple æther
 * 1 grain rib of anteater
-* 6 prisine live ants
+* 6 pristine live ants
 * ¼ kenning pelvis of anteater
 
 ### Directions
@@ -12341,7 +12341,7 @@ Blend in moth.
 
 * ¾ black yellowjacket
 * 3 scruples ulna of mosasaur
-* ¾ scruple prisine copper
+* ¾ scruple pristine copper
 * ½ ounce phalanx of wyvern
 * 1 lot chromium
 * 3 lots pelvis of caiman
@@ -12471,7 +12471,7 @@ The mixture should be shaken, then imbibed while making the appropriate runic ge
 * 8 pounds antimony
 * joy of squirrel
 * 3 kennings leaf of jasmine
-* prisine laughter of chimera
+* pristine laughter of chimera
 * 1 dram carbon, washed
 * ¾ lot leaf of oak
 
@@ -12673,7 +12673,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 * ¾ peck white twig of hoya
 * 6 ounces cold flower of dandelion
 * ¼ mite
-* 6 kennings prisine bark of loosestrife
+* 6 kennings pristine bark of loosestrife
 * 1 ounce bud of oak
 * 5 drams phalanx of crocodile
 * shadow of creeper
@@ -12916,7 +12916,7 @@ Take a handful and scatter it in a loose circle.
 * 7 live moths
 * 4 pecks seed of kudzu, cubed
 * 5 ounces root of titan arum
-* 4 prisine live locusts
+* 4 pristine live locusts
 
 ### Directions
 

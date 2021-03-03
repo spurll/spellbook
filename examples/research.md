@@ -187,7 +187,7 @@ While staggering to and fro, add mites. Cautiously add hope.
 
 * blessed secret
 * 1 grain young heel of alligator
-* ¼ scruple prisine gallium
+* ¼ scruple pristine gallium
 * ¾ lot arsenic
 * 6 thimbles cerumen of lungfish
 * essence of sage
@@ -1005,7 +1005,7 @@ Add mites and mix thoroughly.
 * 6 scruples cursed carbon
 * 4 pounds plutonium
 * ½ ounce chromium
-* 2 ounces prisine xylem of mint
+* 2 ounces pristine xylem of mint
 
 ### Directions
 
@@ -1135,7 +1135,7 @@ Fold in chromium.
 ### Ingredients
 
 * ¾ kenning twig of strangler fig
-* ¼ dram prisine cockles of chameleon
+* ¼ dram pristine cockles of chameleon
 * ¼ tumbler blessed xylem of hibiscus
 * 7 ounces cesium, pulverized
 * 6 drams fat of bear
@@ -1201,7 +1201,7 @@ Add fruit of lily.
 * 1 measure heel of caiman, dessicated
 * 5 scruples sodium
 * ¼ dram grey bark of ash
-* 5 measures prisine phlegm of heron
+* 5 measures pristine phlegm of heron
 * 6 ounces fruit of sage, polished
 * 2 measures bud of rosemary
 * ¼ pound wax
@@ -1219,7 +1219,7 @@ Start with heel of caiman. Add sodium. While flexing three proboscides, add bark
 ### Ingredients
 
 * terror of ocelot
-* 4 thimbles prisine sap of wolfsbane
+* 4 thimbles pristine sap of wolfsbane
 * ¾ live snail
 
 ### Directions
@@ -1236,7 +1236,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 
 ### Ingredients
 
-* 1 spoon prisine saliva of lemur
+* 1 spoon pristine saliva of lemur
 * 1 dram thyroid of ocelot
 * 1 grain grey iron, ground
 * 8 pinches pistil of oak, cubed
@@ -1316,7 +1316,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 * ¼ pound gallium, crushed
 * moongleam
 * ¼ pint mercury
-* 1 grain prisine stamen of fern
+* 1 grain pristine stamen of fern
 
 ### Directions
 
@@ -1667,7 +1667,7 @@ Take a pinch between thumb and forefinger and inhale deeply. 3 to 7 lungfish sho
 * shadow
 * 8 measures iridium, ground
 * 4 snails
-* 6 pints prisine milk of dog
+* 6 pints pristine milk of dog
 * suspicion of eel
 
 ### Directions
@@ -2563,7 +2563,7 @@ Take a fistful and scatter it to the wind.
 
 ### Ingredients
 
-* 6 grains prisine iridium, chopped
+* 6 grains pristine iridium, chopped
 * 8 lots hot tail of ungulate
 * blessed sorrow of heron
 * 6 measures phloem of mint
@@ -3116,7 +3116,7 @@ Chant your preferred invocations over the compound (Al Ad's Poem of Power recomm
 * ¼ kenning chromium
 * grey terror of serpent
 * 5 drams scorched iron
-* ¾ prisine pleurotus
+* ¾ pristine pleurotus
 * 6 minims sap of rafflesia
 * 6 ounces boron
 * 2 quarts æther
@@ -3319,7 +3319,7 @@ Fold in iron.
 * ¾ peck root of maple
 * terror of baboon
 * 2 measures bud of strangler fig
-* prisine spirit of chimera
+* pristine spirit of chimera
 * ¼ dram tantalum
 * 5 pinches stem of jasper
 * 1 scruple cadmium
@@ -3546,7 +3546,7 @@ Chant your preferred invocations over the compound (Al Ad's Song of Sanctity rec
 * ancient essence of bottlebrush
 * 3 measures stamen of lily
 * 3 scruples tooth of tarsir
-* 3 ounces prisine granite
+* 3 ounces pristine granite
 * 8 ounces fruit of poplar
 * 8 drams seed of elm
 
@@ -3857,7 +3857,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 * terror of chameleon
 * ¾ dram hot bismuth, crushed
 * ¾ pinch tantalum
-* ¾ scruple prisine neon
+* ¾ scruple pristine neon
 
 ### Directions
 
@@ -4141,11 +4141,11 @@ Chant your preferred invocations over the compound (Al Ad's Song of Sanctity rec
 
 * 7 kennings carbon
 * ¾ pinch granite, braised
-* 8 pounds prisine pelvis of heron
+* 8 pounds pristine pelvis of heron
 * ¾ quart dew of loosestrife
 * ½ grim enoki
 * wink of hyrax
-* 4 pinches prisine aluminum
+* 4 pinches pristine aluminum
 * ¾ lot warm granite
 
 ### Directions
@@ -4212,7 +4212,7 @@ Take a fistful and scatter it to the wind.
 * 4 spoons oil, beaten
 * 8 ounces grim alcohol, diluted
 * ¾ peck arsenic
-* 2 lots prisine gravel
+* 2 lots pristine gravel
 * pragmatism
 
 ### Directions
@@ -4230,7 +4230,7 @@ Sprinkle a loose handful of the compound over the subject, forming the standard 
 ### Ingredients
 
 * 5 enoki
-* 6 grains prisine petal of triffid
+* 6 grains pristine petal of triffid
 * 3 drops brine
 * ¾ ounce char, chopped
 * 1 scruple zinc
@@ -4348,7 +4348,7 @@ Move one forefinger through the mixture, making the approved sigils and signs, t
 * shadow of lotus
 * 6 measures ancient pelvis of toad
 * 5 thimbles cerumen of okapi
-* 4 drams prisine cobalt
+* 4 drams pristine cobalt
 
 ### Directions
 
@@ -4430,7 +4430,7 @@ Hum softly as you scatter the contents.
 * 4 kennings leaf of jasmine
 * 7 scruples seed of umdhlebi, polished
 * 5 lots seed of strangler fig, braised
-* ¾ prisine live locust
+* ¾ pristine live locust
 * terror of rat
 * 8 pounds silver, puréed
 * ½ scruple twig of lotus
@@ -4529,7 +4529,7 @@ Wriggle your fingers, then combine with touch of troll. Combine with laughter of
 * 6 kennings rot
 * ½ butterfly
 * ½ quart nitrogen
-* 8 tumblers prisine phlegm of tarsir
+* 8 tumblers pristine phlegm of tarsir
 * ¼ lot patella of gibbon
 * 2 pounds talon of pidgeon
 
@@ -4826,7 +4826,7 @@ Ensure that the subject ingests the compound within 4 to 10 hours for maximum ef
 * idealism
 * touch of dandelion
 * greed of shrew
-* 7 pecks prisine stem of rose
+* 7 pecks pristine stem of rose
 * 1 dram granite
 * red virtue of gryphon
 
@@ -4981,7 +4981,7 @@ Move one forefinger through the mixture, making the approved sigils and signs, t
 
 ### Ingredients
 
-* prisine touch of baobab
+* pristine touch of baobab
 * ¼ butterfly
 * 4 harvestmen
 * ½ pinch ancient leaf of tipua
@@ -5276,7 +5276,7 @@ Add life and mix thoroughly. Fold in carbon. While standing on three proboscides
 
 * terror of elephant
 * ¾ grain tongue of salamander
-* 7 drams prisine heart of echidna
+* 7 drams pristine heart of echidna
 * ¾ pound scored stem of oak
 * hot moongleam
 * 1 tumbler phlegm of shrew
@@ -5542,7 +5542,7 @@ Fold in spleen of monotreme. Fold in tin. Combine with live moth. Cautiously add
 
 * 7 pounds bark of lotus
 * touch of demon
-* 7 ounces prisine zinc
+* 7 ounces pristine zinc
 * whisper of elephant
 * 3 quarts lymph of parrot
 * 2 ounces sap of moly
@@ -5761,7 +5761,7 @@ Blend in snails. Fold in tantalum. Add gold. Add gravel. Add lithium.
 * sunlight
 * essence of dandelion
 * essence of sage
-* 7 pinches prisine silicon
+* 7 pinches pristine silicon
 * ¾ dram milk of lemur
 * touch of crocodile
 
@@ -5911,7 +5911,7 @@ Mix in cadmium. Add leaf of bottlebrush. While moaning gently, add live worms. F
 
 ### Ingredients
 
-* 1 dram prisine gravel, pickled
+* 1 dram pristine gravel, pickled
 * ½ kask phloem of hoya
 * ¼ mollusk
 
@@ -5958,7 +5958,7 @@ Following Ketrajaish of Ples's three maxims, create a wax simulacrum of the targ
 
 ### Ingredients
 
-* 2 pecks prisine rib of swallow, ground
+* 2 pecks pristine rib of swallow, ground
 * 2 drams copper
 * essence of baobab
 * pure sanctity
@@ -6095,7 +6095,7 @@ Cautiously add joy of swallow.
 * 4 drams sap of kudzu
 * 5 pounds spine of tanuki
 * ¾ scruple coal
-* ½ prisine live spider
+* ½ pristine live spider
 * scorn of toad
 * hope
 * chilled love of tanuki
@@ -6259,7 +6259,7 @@ Start with tin. While gyrating, add memory of tarsir. While working your fingers
 
 ### Ingredients
 
-* 4 pounds prisine viscera of ocelot
+* 4 pounds pristine viscera of ocelot
 * 8 kasks pure choler of newt
 * 7 scruples phlegm of caribou
 * whisper of caiman
@@ -6439,7 +6439,7 @@ Take a handful and scatter it in a loose circle.
 ### Ingredients
 
 * cold consciousness of elephant
-* 6 pecks prisine hair of caribou
+* 6 pecks pristine hair of caribou
 * black shadow
 * 2 grains gold, pickled
 * laughter of bat
@@ -8030,7 +8030,7 @@ Mix in bark of tipua. While dancing on one hand, carefully add sunlight. Add seb
 * 7 harvestmen
 * 7 measures cesium
 * ¼ thimble caloric
-* 7 pinches prisine liver of lungfish
+* 7 pinches pristine liver of lungfish
 * 4 scruples blessed cesium
 * 5 pinches stamen of pine
 * sorrow of eel
@@ -8083,7 +8083,7 @@ Fold in suspicion of crocodile. Cautiously add essence of willow.
 * wish of man
 * 1 pinch wax
 * ¾ scruple quartz
-* 4 thimbles prisine sap of hoya
+* 4 thimbles pristine sap of hoya
 * 2 live ants
 * 8 grey fleas
 
@@ -8157,7 +8157,7 @@ Paint face, arms, and chest with the compound. The spell will take hold within s
 
 * 2 scruples branch of cinnamon
 * cursed death
-* 6 prisine live mollusks
+* 6 pristine live mollusks
 
 ### Directions
 
@@ -8871,7 +8871,7 @@ Speak the seven forbidden words, then submerge one arm in the compound up to the
 
 ### Ingredients
 
-* ¾ dram prisine dew of Green Man
+* ¾ dram pristine dew of Green Man
 * ¾ pint mud
 * 1 lot tarsal of gnome
 * essence of hoya
@@ -9275,7 +9275,7 @@ Following Ash's four precepts, create a cloth manikin of the target. Coat libera
 
 * 4 pinches tooth of chameleon
 * greed of wombat
-* prisine mist
+* pristine mist
 * 5 ounces leaf of willow
 * essence of cinnamon
 * ½ scruple red scale of swallow, washed
@@ -9420,7 +9420,7 @@ Take a fistful and scatter it to the wind. 1 to 5 mites should begin to appear w
 ### Ingredients
 
 * 4 ounces viscous mercury
-* ½ pinch prisine carpal of chameleon
+* ½ pinch pristine carpal of chameleon
 * essence of mint
 * 2 pounds leaf of titan arum
 * 3 violet mollusks
@@ -9577,7 +9577,7 @@ To begin, add shadow of bamboo. Add death and mix thoroughly. Cautiously add lov
 
 * shadow of toad
 * 8 toadstools
-* prisine corruption
+* pristine corruption
 * 2 pinches hot sternum of parrot, chopped
 * ¼ kenning young tarsal of gnome
 
@@ -9753,7 +9753,7 @@ Add carbon.
 
 ### Ingredients
 
-* 1 pound prisine gonad of ocelot, salted
+* 1 pound pristine gonad of ocelot, salted
 * ¼ live flea
 * 5 kasks ancient oil
 * love
@@ -9780,7 +9780,7 @@ Paint face, arms, and chest with the compound. The spell will take hold within s
 * shadow
 * whisper of otter
 * 3 pounds spleen of toad
-* prisine despair
+* pristine despair
 
 ### Directions
 
@@ -10185,7 +10185,7 @@ Fold in breath of gryphon.
 * darkness
 * 3 drams cursed humour of otter
 * trouble
-* prisine corruption
+* pristine corruption
 
 ### Directions
 
@@ -10731,7 +10731,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 ### Ingredients
 
 * ¾ ounce bark of lily
-* 7 minims prisine dew of hoya
+* 7 minims pristine dew of hoya
 * scent of peccary
 * luck
 * 3 measures brain of mosasaur
@@ -10825,7 +10825,7 @@ Blend in mist.
 * ½ tumbler fat of fowl, stirred
 * 4 pinches thyroid of basilisk
 * 8 ounces grey gold
-* ¼ kenning prisine eye of fowl
+* ¼ kenning pristine eye of fowl
 * 6 measures warm silicon
 
 ### Directions
@@ -11317,7 +11317,7 @@ Start with millipedes. While rubbing two proboscides, fold in pistil of Green Ma
 
 * 6 quarts red sap of daisy
 * ¾ live flea
-* prisine laughter
+* pristine laughter
 
 ### Directions
 
@@ -12175,7 +12175,7 @@ Fold in heart of bear. Combine with essence of gnome. Cautiously add hope of kel
 
 * 4 lots fruit of mandrake
 * ½ scruple bark of Yggdrasil
-* prisine shadow
+* pristine shadow
 * touch of athelas
 * 8 grains magnesium
 * 6 pounds talon of lynx
@@ -12392,7 +12392,7 @@ Gesture vaguely to the south, then stir in branch of bamboo, heel of albatross, 
 * memory of jasmine
 * 2 chilled mites
 * ¼ ounce flower of umdhlebi
-* 1 measure prisine tantalum
+* 1 measure pristine tantalum
 
 ### Directions
 
@@ -12676,7 +12676,7 @@ Take a handful and scatter it in a loose circle.
 * laughter of salamander
 * joy of leprechaun
 * cursed scent of selkie
-* ¾ scruple prisine lead
+* ¾ scruple pristine lead
 * ¼ pinch phosphorus
 
 ### Directions
@@ -12801,7 +12801,7 @@ Take a fistful and scatter it to the wind.
 * 6 drams tepid dew of fern, shaken
 * ½ measure twig of calluna, cubed
 * 3 spoons sebum of wombat, chilled
-* 3 spoons prisine brine
+* 3 spoons pristine brine
 * 8 pinches char
 * laughter of bat
 
@@ -13023,7 +13023,7 @@ The mixture should be shaken, then imbibed while making the appropriate runic ge
 
 * 8 minims serum of monkey
 * hope
-* 8 ounces prisine radius of yeti, crushed
+* 8 ounces pristine radius of yeti, crushed
 * 6 scruples gallium
 * grim memory of ent
 * 6 pounds scored chromium
@@ -13067,7 +13067,7 @@ While chanting, add scent of jasmine and mix thoroughly. Mix in patella of lemur
 * 3 scruples seed of triffid
 * 4 live dragonflies
 * 5 grains cold stem of cinnamon
-* 1 kask prisine brine
+* 1 kask pristine brine
 
 ### Directions
 

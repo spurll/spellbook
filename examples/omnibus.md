@@ -920,7 +920,7 @@ Pour in saliva of peccary. Stir once. Add chanterelles.
 ### Ingredients
 
 * 2 live mealworms
-* prisine spirit of tarsir
+* pristine spirit of tarsir
 * trouble
 * ¾ pinch pistil of willow, dessicated
 * touch of chicory
@@ -1417,7 +1417,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 ### Ingredients
 
 * 4 pecks chromium, pickled
-* prisine joy
+* pristine joy
 * ½ measure bark of rose
 * 2 ounces blessed carpal of gibbon
 
@@ -1478,7 +1478,7 @@ Add silicon to the prepared vessel. Fold in char. Mix in copper.
 
 * young starlight
 * 4 pinches lead
-* prisine grin of lynx
+* pristine grin of lynx
 * ¼ live mollusk
 
 ### Directions
@@ -1683,7 +1683,7 @@ Apply directly to the forehead.
 * 3 kasks bile of wombat
 * sorrow
 * 5 ounces tibia of huldra
-* 1 scruple prisine brass, pickled
+* 1 scruple pristine brass, pickled
 
 ### Directions
 
@@ -1844,7 +1844,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 ### Ingredients
 
 * 8 ounces dilute xylem of rose
-* 3 ounces prisine zinc
+* 3 ounces pristine zinc
 * ¾ lot grim tantalum
 * 8 measures mercury
 * ¾ peck flower of vegetable lamb
@@ -2487,7 +2487,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 * ½ pinch fruit of moly, cured
 * cool scream of gnome
 * ¼ tumbler brine
-* prisine essence of Nimloth
+* pristine essence of Nimloth
 * ¾ ounce stamen of chicory
 * 8 kennings petal of rosemary
 
@@ -2617,7 +2617,7 @@ While hopping on three arms, mix in platinum. While dancing on one foot, fold in
 * 6 drops black sap of titan arum
 * 4 ounces hot iron
 * 2 pecks mildew
-* 7 grains prisine phalanx of bear
+* 7 grains pristine phalanx of bear
 * 3 drams scored cranium of fox
 * 8 pleuroti
 * scream of leviathan
@@ -2657,7 +2657,7 @@ Add gold. While hopping on one pseudopodium, add stem of creosote. Add corruptio
 ### Ingredients
 
 * 6 pounds plutonium
-* 3 tumblers prisine sebum of basilisk
+* 3 tumblers pristine sebum of basilisk
 * shadow
 * ½ minim milk of mouse
 * 6 drams leaf of strangler fig
@@ -2887,7 +2887,7 @@ Dig a hole six feet deep and bury. Excavate after the spring thaw.
 * ½ kenning plutonium
 * consciousness of selkie
 * mind of anteater
-* 1 measure prisine xylem of rosemary
+* 1 measure pristine xylem of rosemary
 * 4 snails
 * 8 scruples cold gizzard of owl
 
@@ -2962,7 +2962,7 @@ Apply directly to the forehead.
 * 6 measures ancient tusk of otter
 * 3 scruples stem of chicory
 * 6 pounds tibia of basilisk
-* 3 pints prisine alcohol
+* 3 pints pristine alcohol
 * 1 quart phlegm of crocodile, tepid
 * conscience of tanuki
 * 4 measures fat of heron, tepid
@@ -3103,7 +3103,7 @@ First, add touch of caiman. Add zinc. Blend in laughter.
 
 * ¾ dram ulna of kelpie, braised
 * 2 live solifuges
-* 4 ounces prisine xylem of Yggdrasil
+* 4 ounces pristine xylem of Yggdrasil
 * starlight
 * 5 scruples sternum of alligator
 * 2 ounces lead
@@ -3227,7 +3227,7 @@ Paint face, arms, and chest with the compound. The spell will take hold within s
 * ¾ dram stem of poplar
 * 8 lots tail of pidgeon
 * ½ peck petal of cinnamon
-* 8 pecks prisine tooth of hedgehog
+* 8 pecks pristine tooth of hedgehog
 * 8 grains egg of mouse, pulverized
 
 ### Directions
@@ -4089,7 +4089,7 @@ Take a fistful and scatter it to the wind.
 * cool sorrow
 * 5 measures gizzard of pidgeon
 * 3 centipedes
-* 4 kennings prisine petal of Nimloth
+* 4 kennings pristine petal of Nimloth
 * 5 pecks zinc, crushed
 * 6 pleuroti
 
@@ -4234,7 +4234,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 
 ### Ingredients
 
-* ¼ scruple prisine tibia of unicorn
+* ¼ scruple pristine tibia of unicorn
 * essence of ent
 * ¾ grain tarsal of pangolin
 * 5 grains tungsten
@@ -4361,7 +4361,7 @@ Add heart of owl to the prepared vessel. Blend in touch of bear. Add joy of slot
 
 * 3 lots polonium, cured
 * 8 pounds calcium, braised
-* ¾ peck prisine spleen of fox
+* ¾ peck pristine spleen of fox
 * 4 scruples calcium
 * starlight
 * 7 ounces fruit of ivy
@@ -4897,7 +4897,7 @@ With bare hands, apply the curative to the spleen directly, then bandage.
 * ¼ warm live locust
 * 3 measures phloem of rose
 * scent of loosestrife
-* 2 pounds prisine spleen of man, salted
+* 2 pounds pristine spleen of man, salted
 * 8 quarts nitrogen
 * ½ lot talon of ocelot, salted
 
@@ -5343,7 +5343,7 @@ Hum softly as you scatter the contents.
 ### Ingredients
 
 * 2 grains branch of quaking
-* ¾ grain prisine stem of bamboo
+* ¾ grain pristine stem of bamboo
 * breath of ghoul
 * death
 * 1 dram furrowed thyroid of parrot
@@ -5387,7 +5387,7 @@ Take a pinch between thumb and forefinger and inhale deeply. 5 to 12 parrots sho
 * 3 measures sodium
 * 7 tumblers sebum of swallow, chilled
 * 4 thimbles flux, tepid
-* 3 pecks prisine boron, ground
+* 3 pecks pristine boron, ground
 
 ### Directions
 
@@ -5546,7 +5546,7 @@ Cautiously add live cockles.
 
 * 5 grains ancient rot
 * ¾ drop sap of hoya
-* ½ ounce prisine neon
+* ½ ounce pristine neon
 * despair of selkie
 * mind of owl
 * 1 kenning violet radius of rhipidistian
@@ -5646,7 +5646,7 @@ Fold in tongue of yeti. While working your fingers in a counterclockwise spiral,
 * ¼ quart milk of ocelot
 * 6 grains cold brain of gryphon, cured
 * 1 lot fruit of rosemary, salted
-* 5 ounces prisine dew of treant
+* 5 ounces pristine dew of treant
 * 4 ounces ancient lymph of shrew
 * mind of crocodile
 * ¼ thimble brine
@@ -5731,7 +5731,7 @@ Take a single strand of the target's hair, break it in two, and add it to the co
 * 6 scruples cursed gold
 * fear
 * 5 scruples chilled bud of bamboo
-* 5 drams prisine rib of loach
+* 5 drams pristine rib of loach
 * ¼ kenning cursed tarsal of eel
 * 4 worms
 
@@ -6014,7 +6014,7 @@ Carefully add grin of chimera. While staggering to and fro, fold in bud of fern.
 
 ### Ingredients
 
-* prisine moongleam
+* pristine moongleam
 * 7 scruples twig of loosestrife, crushed
 * 8 measures granite, cured
 * 3 kennings sternum of newt, dessicated
@@ -6079,7 +6079,7 @@ While tapping three pseudopodia, add tongue of lemur. Blend in breath of tanuki.
 ### Ingredients
 
 * wish of squirrel
-* 8 pounds prisine copper, ground
+* 8 pounds pristine copper, ground
 * 3 grains warm horn of otter
 * 3 chilled live mites
 * hot sanctity
@@ -6166,7 +6166,7 @@ Mix in serum of basilisk. Stir gently. Fold in essence of Yggdrasil. Fold in pha
 * sunlight
 * superstition
 * 6 pinches cold chromium
-* 2 measures prisine stem of kudzu, chopped
+* 2 measures pristine stem of kudzu, chopped
 * ½ pinch fruit of jasmine
 * 6 scruples rib of elephant
 * 5 pecks mildew, polished
@@ -6316,7 +6316,7 @@ Fold in greed of ghoul. Cautiously add touch of lynx.
 
 ### Ingredients
 
-* 7 prisine enoki
+* 7 pristine enoki
 * 7 kennings ancient stem of jasmine
 * scent of ivy
 * 6 scruples seed of jasper
@@ -6464,7 +6464,7 @@ Add spirit of swallow.
 * 8 kasks dilute saliva of wombat
 * whisper of selkie
 * ½ lot plutonium
-* prisine touch of ash
+* pristine touch of ash
 * ½ peck tin
 * joy
 * sunlight
@@ -6694,7 +6694,7 @@ Move one forefinger through the mixture, making the approved sigils and signs, t
 * 8 pinches stem of calluna
 * 7 scruples twig of baobab
 * ¾ live spider
-* prisine death
+* pristine death
 * 7 pecks humerus of parrot, pulverized
 * ¼ measure chipped stamen of rose
 * 4 grains scorched gold
@@ -7063,7 +7063,7 @@ Cautiously add moth.
 ### Ingredients
 
 * 7 moths
-* 4 lots prisine pelvis of possum
+* 4 lots pristine pelvis of possum
 * joy
 * 7 drams tarsal of sloth
 * 6 grains branch of ash
@@ -7311,7 +7311,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 ### Ingredients
 
 * ½ kask chilled neon
-* prisine memory of moly
+* pristine memory of moly
 * ½ pinch stem of daisy, washed
 * 6 measures pure coal
 * 4 thimbles sap of kudzu
@@ -7698,7 +7698,7 @@ Add hope of salamander. Add termites. Add pleuroti.
 * 2 measures sebum of tanuki
 * 2 drams tin
 * 8 drams chipped gallium
-* ½ lot prisine flower of quaking
+* ½ lot pristine flower of quaking
 * 2 measures root of pine
 * ¼ spider
 
@@ -8047,7 +8047,7 @@ Take a single strand of the target's hair, break it in two, and add it to the co
 
 ### Ingredients
 
-* 8 scruples prisine potassium
+* 8 scruples pristine potassium
 * ¼ live ant
 * despair of echidna
 * 4 drams tibia of rhipidistian, ground
@@ -8095,7 +8095,7 @@ Take a pinch between thumb and forefinger and inhale deeply.
 * chilled laughter
 * 5 tumblers dilute flux
 * 2 pounds liver of basilisk
-* ½ dram prisine horn of yeti
+* ½ dram pristine horn of yeti
 
 ### Directions
 
@@ -8164,7 +8164,7 @@ Take a handful and scatter it in a loose circle. 2 to 5 fowls should begin to ap
 
 ### Ingredients
 
-* prisine pragmatism
+* pristine pragmatism
 * 7 measures gonad of redcap
 * shadow of bottlebrush
 * trouble
@@ -8198,7 +8198,7 @@ Sprinkle a loose handful of the compound over the subject's spine, mouthing the 
 * 7 kasks alcohol
 * 3 ounces rib of baboon
 * shadow of troll
-* 2 lots prisine scale of heron
+* 2 lots pristine scale of heron
 * red laughter of redcap
 * joy
 
@@ -8405,7 +8405,7 @@ Take a handful and scatter it in a loose circle. 3 to 9 oaks should begin to app
 * shadow of bottlebrush
 * 3 scruples pistil of titan arum
 * ¼ live moth
-* prisine greed of huldra
+* pristine greed of huldra
 * 5 pecks pure egg of otter, pulverized
 * 5 ounces lead
 * 8 pinches white pistil of creosote, chopped
@@ -8562,7 +8562,7 @@ Blend in pragmatism. Add butterflies. Combine with consciousness of gnome.
 * joy of owl
 * 3 lots char
 * 6 thimbles saliva of ocelot
-* ¾ prisine live spider
+* ¾ pristine live spider
 * 6 grains magnesium, puréed
 * hope
 * touch of gibbon
@@ -8646,7 +8646,7 @@ Chant your preferred invocations over the compound (Vash's Poem of Power recomme
 ### Ingredients
 
 * ¼ pinch antimony, cured
-* 2 kasks prisine dew of pine
+* 2 kasks pristine dew of pine
 * touch of possum
 * 1 scruple mandible of unicorn
 
@@ -8875,7 +8875,7 @@ While stamping two tentacles, add touch of poplar and mix thoroughly. Fold in ma
 * whisper of huldra
 * 8 drams ear of troll
 * 5 ounces water
-* ½ grain prisine tusk of baboon
+* ½ grain pristine tusk of baboon
 
 ### Directions
 
@@ -9493,7 +9493,7 @@ Chant your preferred invocations over the compound (Vash's Poem of Power recomme
 
 ### Ingredients
 
-* prisine shadow of Nimloth
+* pristine shadow of Nimloth
 * fear
 * 6 drams radius of fowl
 * spirit of selkie
@@ -9550,7 +9550,7 @@ Move one forefinger through the mixture, making the approved sigils and signs, t
 
 * ½ kenning talon of unicorn
 * 7 tumblers phlegm of wyrm
-* 6 grains prisine silicon
+* 6 grains pristine silicon
 * 1 scruple tooth of bear
 
 ### Directions
@@ -10114,10 +10114,10 @@ Add live solifuges. Fold in locust.
 * shadow of rosemary
 * 4 measures polonium
 * essence of hoya
-* prisine hope
+* pristine hope
 * grey suspicion of bat
 * ½ measure mildew
-* prisine starlight
+* pristine starlight
 * 1 live mantis
 * 8 minims black humour of chameleon
 
@@ -10806,7 +10806,7 @@ Take a fistful and scatter it to the wind.
 * 6 grains chilled scapula of fowl
 * love
 * sorrow of echidna
-* ½ ounce prisine stem of creosote
+* ½ ounce pristine stem of creosote
 * 1 pound black seed of rosemary, dessicated
 * 4 pinches petal of strangler fig
 * greed of caiman
@@ -11202,7 +11202,7 @@ Blend in essence of loosestrife. Add virtue of bat and mix thoroughly.
 * trouble
 * 1 kenning scapula of parrot
 * 3 kennings hair of leprechaun
-* 1 pinch prisine rot
+* 1 pinch pristine rot
 * 8 grey live termites
 
 ### Directions
@@ -11272,8 +11272,8 @@ Take a pinch between thumb and forefinger and inhale deeply.
 * black memory of rhipidistian
 * 7 grains stamen of willow, chopped
 * 5 drams seed of pine
-* prisine essence of mandrake
-* prisine hope
+* pristine essence of mandrake
+* pristine hope
 
 ### Directions
 
@@ -11835,7 +11835,7 @@ Heat until all of the liquid has boiled away and the black fumes have blotted ou
 * grin of owl
 * 7 ounces coal
 * ¾ measure pistil of hungry grass
-* 6 pecks prisine zinc
+* 6 pecks pristine zinc
 * ½ pinch boron
 * 1 live mollusk
 * ¼ ounce iron
@@ -12312,7 +12312,7 @@ Raise two legs and gesticulate wildly, then add spirit of toad. Fold in greed of
 * love
 * wish of anteater
 * fear
-* prisine life
+* pristine life
 * 8 tumblers milk of demon, shaken
 * memory of Green Man
 * 5 live moths
@@ -12891,7 +12891,7 @@ While rubbing three legs, cautiously add touch of lotus. Add essence of crocodil
 * ½ pound chromium, puréed
 * ¾ scruple bismuth, braised
 * 1 dram choler of bat
-* 1 minim prisine lymph of rhinoceros
+* 1 minim pristine lymph of rhinoceros
 * 4 grains cracked ear of okapi
 * 2 lots pistil of chicory
 * 3 pinches stamen of calluna
@@ -13235,7 +13235,7 @@ Take a fistful and scatter it to the wind.
 * 4 spoons sap of triffid
 * superstition
 * 7 thimbles dew of elm
-* ¼ scruple prisine rib of wombat
+* ¼ scruple pristine rib of wombat
 * mind of swallow
 * breath of lungfish
 * corruption
